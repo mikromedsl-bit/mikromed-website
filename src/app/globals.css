@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-inter: "Inter";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #F7F9FA;
+  color: #1e2a35;
+}
+
+::selection {
+  background: #BEC6CD;
+  color: #17324D;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.technical-grid {
+  background-image:
+    linear-gradient(rgba(23, 50, 77, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 50, 77, 0.06) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
