@@ -35,10 +35,28 @@ export type PageContent = {
 export type ProductItem = CardItem & {
   field: string;
   badges: string[];
+  patentRefs?: string[];
 };
 
 export type ProductGroup = {
   title: string;
   description: string;
   items: ProductItem[];
+};
+
+export type PatentItem = {
+  title: string;
+  applicationNumber: string;
+  publicationOrGrant: string;
+  holder: string;
+  inventors: string;
+  filingDate: string;
+  grantDate: string;
+  status: "Concesso" | "Domanda in procedura" | "Interlocutoria";
+  territories: string;
+  summary: string;
+  applications: string;
+  relatedProducts: string;
+  publicLink?: string;
+  localSource: string;
 };

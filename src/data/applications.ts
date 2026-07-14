@@ -3,39 +3,39 @@ import type { CardItem } from "@/data/types";
 
 export const applications: CardItem[] = [
   {
-    title: "Agricoltura e suolo",
+    title: "Agricoltura, suolo e rizosfera",
     description:
-      "Esigenze legate a suolo, rizosfera e gestione fisica dell'acqua, con percorsi formulativi minerali e attenzione al posizionamento regolatorio.",
+      "Piattaforme Hydronica, Mikro Earth e Mikro Soil collegate all'area idroritentiva: gestione fisica dell'acqua, root zone e applicazioni florovivaistiche.",
     icon: Sprout
+  },
+  {
+    title: "Superfici, coatings e ambienti umidi",
+    description:
+      "MikroPaint, Sterilnova HH, MikroMold e Fotonika sono collegati a piattaforme per superfici, coatings e formulazioni funzionali.",
+    icon: Paintbrush
+  },
+  {
+    title: "Formulazioni rame/argento e fotoattive",
+    description:
+      "Area tecnica collegata ai brevetti 102021000004580 e 102023000019734, da comunicare con posizionamento regolatorio prudente.",
+    icon: Waves
   },
   {
     title: "Animal care e lettiere",
     description:
-      "Formulazioni per lettiere e ambienti animali orientate a gestione fisica dell'umidità, controllo fisico degli odori e comunicazione conforme.",
+      "Campo applicativo per formulazioni minerali orientate a gestione fisica dell'umidità e controllo fisico degli odori.",
     icon: PawPrint
   },
   {
     title: "Mangimi e additivi minerali",
     description:
-      "Concept minerali per mangimi e additivi, con valutazione della funzione tecnica, della categoria prodotto e delle opportunità di partnership.",
+      "Concept minerali da valutare con attenzione a funzione tecnologica, documentazione e quadri regolatori applicabili.",
     icon: Leaf
   },
   {
-    title: "Superfici e coatings",
+    title: "R&D, orale e nuove domande brevettuali",
     description:
-      "Formulazioni orientate alle superfici, idropitture e coatings, sviluppate con approccio fisico e revisione dei claim utilizzabili.",
-    icon: Paintbrush
-  },
-  {
-    title: "Home & Professional Care",
-    description:
-      "Prodotti consumer o professionali che richiedono formulazione funzionale, etichetta coerente e comunicazione prudente.",
-    icon: Waves
-  },
-  {
-    title: "Ricerca e sviluppo industriale",
-    description:
-      "Progetti R&D su misura per partner industriali che cercano una piattaforma protetta, un prototipo o un percorso partner-ready.",
+      "Ambiti emersi dalle domande in procedura: formulazioni orali, idratazione, nuove composizioni tecniche e progetti R&D su misura.",
     icon: Beaker
   }
 ];

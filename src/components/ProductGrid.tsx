@@ -38,6 +38,16 @@ export function ProductGrid({ items }: { items: ProductItem[] }) {
                 </span>
               ))}
             </div>
+            {item.patentRefs && item.patentRefs.length > 0 ? (
+              <div className="mt-5 border-t border-mineral-200 pt-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mineral-500">
+                  Brevetti / domande collegate
+                </p>
+                <p className="mt-2 text-sm leading-6 text-mineral-700">
+                  {item.patentRefs.join(", ")}
+                </p>
+              </div>
+            ) : null}
           </article>
         );
       })}

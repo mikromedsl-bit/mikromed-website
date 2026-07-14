@@ -11,6 +11,7 @@ import {
   TestTube2
 } from "lucide-react";
 import { applications } from "@/data/applications";
+import { grantedPatents, patentPortfolioSummary, pendingPatents } from "@/data/patents";
 import { productGroups } from "@/data/products";
 import {
   patentWritingCards,
@@ -59,19 +60,19 @@ export const heroServiceCards: (CardItem & { href: string; label: string })[] = 
 
 export const statBlocks: CardItem[] = [
   {
-    title: "5 brevetti approvati",
-    description: "Proprietà intellettuale sviluppata internamente e applicata a prodotti e progetti.",
+    title: "4 brevetti concessi trovati",
+    description: "Brevetti concessi in Italia secondo gli attestati e i documenti locali verificati.",
     icon: BadgeCheck
   },
   {
-    title: "Prodotti e piattaforme proprietarie",
-    description: "Soluzioni Mikromed sviluppate per agricoltura, superfici e applicazioni funzionali.",
-    icon: Layers3
+    title: "4 domande in procedura",
+    description: "Domande pendenti o interlocutorie da distinguere chiaramente dai brevetti concessi.",
+    icon: FileLock2
   },
   {
-    title: "Progetti di sviluppo prodotto",
-    description: "Percorsi tecnici e formulativi costruiti su know-how proprietario e obiettivi industriali.",
-    icon: Beaker
+    title: "Prodotti e piattaforme proprietarie",
+    description: "MikroPaint, Sterilnova HH, Fotonika, Hydronica, Mikro Earth e piattaforme collegate.",
+    icon: Layers3
   },
   {
     title: "Strategia regolatoria e claim",
@@ -168,33 +169,33 @@ export const buildWithPatents: CardItem[] = [
 
 export const patentPortfolioCards: CardItem[] = [
   {
-    title: "Brevetti propri Mikromed",
-    description: "Portafoglio di brevetti approvati sviluppati e valorizzati da Mikromed.",
+    title: "Brevetti concessi",
+    description: `${patentPortfolioSummary.granted} brevetti concessi trovati nei documenti locali e riportati separatamente dalle domande in procedura.`,
     icon: BadgeCheck
   },
   {
-    title: "Tecnologie sviluppate internamente",
-    description: "Piattaforme tecnologiche proprietarie applicabili a prodotti Mikromed e progetti industriali.",
+    title: "Domande pendenti o interlocutorie",
+    description: `${patentPortfolioSummary.pending} domande in procedura o con interlocutorie, da presentare come tali senza confonderle con brevetti concessi.`,
+    icon: FileLock2
+  },
+  {
+    title: "Tecnologie per superfici e coatings",
+    description: "Area collegata a 102021000004580, 102023000019734 e 102023000020343.",
     icon: Layers3
   },
   {
-    title: "Accesso tramite partnership",
-    description: "Possibile accesso a tecnologie e know-how tramite accordi strutturati, licenza o co-sviluppo.",
-    icon: Handshake
-  },
-  {
-    title: "Supporto a nuovi brevetti",
-    description: "Supporto tecnico alla strutturazione di nuove idee brevettabili insieme ai partner.",
-    icon: PenTool
-  },
-  {
-    title: "Applicazioni possibili",
-    description: "Agricoltura, superfici, animal care, formulazioni funzionali e progetti R&D.",
+    title: "Tecnologie idroritentive agricole",
+    description: "Area collegata a 102023000025887 e 102026000014101 per suolo, rizosfera e gestione fisica dell'acqua.",
     icon: Factory
   },
   {
+    title: "Formulazioni orali e idratazione",
+    description: "Ambiti emersi da 102020000008134, 102023000008709, 102024000022623 e 102023000020343.",
+    icon: PenTool
+  },
+  {
     title: "Accesso tecnico sotto NDA",
-    description: "Condivisione tecnica riservata in discussioni di partnership qualificate.",
+    description: "I dettagli tecnici e i collegamenti commerciali vengono condivisi in modo riservato quando necessario.",
     icon: ShieldCheck
   }
 ];
@@ -263,14 +264,24 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "Brevetti e tecnologie",
     title: "Brevetti approvati e tecnologie proprietarie",
     description:
-      "Mikromed Europa sviluppa e valorizza un portafoglio di brevetti approvati e tecnologie funzionali applicabili a prodotti propri e progetti industriali.",
+      "Mikromed Europa valorizza un portafoglio composto da brevetti concessi, domande in procedura, piattaforme tecnologiche e prodotti collegati.",
     intro:
-      "La proprietà intellettuale Mikromed non è solo un asset documentale: è la base di prodotti, piattaforme e collaborazioni industriali. Le informazioni tecniche possono essere condivise sotto NDA.",
+      "Questa pagina distingue brevetti concessi, domande pendenti o interlocutorie, prodotti collegati e campi di applicazione. I dati derivano dal report locale sui documenti brevettuali Mikromed; dove un dato non è stato trovato, non viene inventato.",
     keywords: ["brevetti approvati", "tecnologie proprietarie", "tecnologie minerali", "supporto brevettuale"],
     sections: [
       {
         title: "Il portafoglio brevetti Mikromed",
         items: patentPortfolioCards
+      },
+      {
+        title: "Brevetti concessi",
+        description: grantedPatents.map((patent) => `${patent.applicationNumber} - ${patent.title}`).join(" | "),
+        items: []
+      },
+      {
+        title: "Domande in procedura",
+        description: pendingPatents.map((patent) => `${patent.applicationNumber} - ${patent.title}`).join(" | "),
+        items: []
       },
       {
         title: "Campi tecnologici",
@@ -290,7 +301,7 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "Brevetti e tecnologie",
     title: "Brevetti approvati e tecnologie proprietarie",
     description:
-      "Mikromed Europa sviluppa e valorizza un portafoglio di brevetti approvati e tecnologie funzionali applicabili a prodotti propri e progetti industriali.",
+      "Mikromed Europa valorizza brevetti concessi, domande in procedura, piattaforme tecnologiche e prodotti collegati.",
     keywords: ["brevetti approvati", "tecnologie proprietarie", "tecnologie minerali"],
     sections: [
       {
@@ -331,7 +342,7 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "Prodotti e opportunità",
     title: "Prodotti, piattaforme e opportunità",
     description:
-      "Mikromed sviluppa prodotti propri, concept e piattaforme tecnologiche. Alcuni progetti sono già attivi in mercati selezionati, mentre altri possono essere adattati tramite partnership, distribuzione o licenza.",
+      "Mikromed sviluppa prodotti propri, concept e piattaforme tecnologiche collegati a brevetti concessi, domande in procedura o aree tecniche documentate.",
     intro:
       "La disponibilità commerciale, le eventuali esclusive territoriali e i modelli di partnership vengono valutati caso per caso. I partner esistenti non vengono divulgati pubblicamente.",
     keywords: ["prodotti Mikromed", "piattaforme tecnologiche", "partnership industriali", "coatings", "agricoltura"],
