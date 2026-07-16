@@ -16,8 +16,9 @@ export function CTASection({
   label
 }: CTASectionProps) {
   return (
-    <section className="bg-forest-900 text-white">
-      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:px-8">
+    <section className="relative overflow-hidden bg-forest-900 text-white">
+      <div className="absolute inset-0 technical-grid-dark opacity-60" aria-hidden="true" />
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-copper-300">
             {eyebrow}

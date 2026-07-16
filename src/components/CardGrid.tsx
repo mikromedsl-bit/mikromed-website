@@ -19,17 +19,17 @@ export function CardGrid({ items, columns = "three", dark = false }: CardGridPro
         const Icon = item.icon;
         return (
           <article
-            className={`rounded-lg border p-6 transition ${
+            className={`rounded-lg border p-6 transition duration-200 ${
               dark
                 ? "border-white/15 bg-white/5 text-white"
-                : "border-mineral-200 bg-white text-mineral-900 shadow-sm hover:shadow-soft"
+                : "border-mineral-200/90 bg-white text-mineral-900 shadow-[0_10px_32px_rgba(23,50,77,0.06)] hover:-translate-y-0.5 hover:border-mineral-500/45 hover:shadow-[0_20px_46px_rgba(23,50,77,0.10)]"
             }`}
             key={item.title}
           >
             {Icon ? (
               <div
                 className={`mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg ${
-                  dark ? "bg-white/10 text-copper-300" : "bg-forest-50 text-forest-800"
+                  dark ? "bg-white/10 text-copper-300" : "bg-mineral-50 text-forest-900 ring-1 ring-mineral-200/70"
                 }`}
               >
                 <Icon aria-hidden="true" className="h-5 w-5" />

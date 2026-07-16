@@ -12,18 +12,18 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-mineral-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-mineral-200/80 bg-white/[0.92] shadow-[0_1px_0_rgba(23,50,77,0.03)] backdrop-blur-xl">
       <nav
         aria-label="Navigazione principale"
-        className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8"
+        className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-6 lg:px-8"
       >
-        <Link href="/" onClick={() => setOpen(false)}>
+        <Link className="shrink-0" href="/" onClick={() => setOpen(false)}>
           <LogoMark />
         </Link>
         <button
           aria-expanded={open}
           aria-label="Apri o chiudi navigazione"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-mineral-200 text-forest-900 lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-mineral-200 bg-white text-forest-900 shadow-sm lg:hidden"
           onClick={() => setOpen((value) => !value)}
           type="button"
         >
@@ -39,7 +39,7 @@ export function Header() {
                 <Link
                   className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${
                     active
-                      ? "bg-forest-50 text-forest-900"
+                      ? "bg-mineral-50 text-forest-900 shadow-[inset_0_0_0_1px_rgba(190,198,205,0.75)]"
                       : "text-mineral-700 hover:bg-mineral-50 hover:text-forest-900"
                   }`}
                   href={item.href}
@@ -74,7 +74,7 @@ export function Header() {
                 <div key={item.href}>
                   <Link
                     className={`block rounded-lg px-3 py-3 text-sm font-medium ${
-                      active ? "bg-forest-50 text-forest-900" : "text-mineral-700"
+                      active ? "bg-mineral-50 text-forest-900" : "text-mineral-700"
                     }`}
                     href={item.href}
                     onClick={() => setOpen(false)}

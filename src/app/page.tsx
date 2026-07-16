@@ -18,17 +18,19 @@ import {
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-white">
-        <div className="absolute inset-0 technical-grid opacity-70" aria-hidden="true" />
-        <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 px-5 py-12 sm:px-6 lg:grid-cols-[1.04fr_0.96fr] lg:px-8 lg:py-16">
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#FFFFFF_0%,#F7F9FA_52%,#EDF1F4_100%)]">
+        <div className="absolute inset-0 technical-grid opacity-55" aria-hidden="true" />
+        <div className="absolute -right-28 top-20 h-72 w-72 rounded-full border border-mineral-200/60" aria-hidden="true" />
+        <div className="absolute bottom-16 right-20 h-40 w-40 rounded-full border border-mineral-200/50" aria-hidden="true" />
+        <div className="relative mx-auto grid min-h-[calc(100vh-4.75rem)] max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-20">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-500">
               Mikromed Europa S.L.
             </p>
-            <h1 className="mt-5 text-4xl font-semibold tracking-normal text-forest-900 text-balance sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 max-w-4xl text-[2.55rem] font-semibold leading-[1.04] tracking-normal text-forest-900 text-balance sm:text-5xl lg:text-[3.65rem]">
               Brevetti approvati, prodotti sviluppati e collaborazioni industriali.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-mineral-700">
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-mineral-700">
               Mikromed Europa valorizza un portafoglio di brevetti concessi e
               tecnologie funzionali, trasformandoli in prodotti, piattaforme
               applicative e opportunita di collaborazione nei settori superfici,
@@ -38,7 +40,7 @@ export default function Home() {
             <p className="mt-4 text-base font-semibold text-forest-800">
               Brevetti approvati, prodotti sviluppati e collaborazioni industriali per mercati regolati.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href="/patents">Scopri i brevetti</ButtonLink>
               <ButtonLink href="/products-projects" variant="secondary">
                 Esplora i prodotti
@@ -48,16 +50,28 @@ export default function Home() {
               </ButtonLink>
             </div>
           </div>
-          <div className="relative min-h-[360px] overflow-hidden rounded-lg border border-mineral-200 shadow-soft lg:min-h-[520px]">
-            <Image
-              alt="Visual di tecnologie minerali e laboratorio"
-              className="h-full w-full object-cover"
-              fill
-              priority
-              sizes="(min-width: 1024px) 48vw, 100vw"
-              src="/images/mineral-technology-hero.png"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-forest-900/45 via-transparent to-mineral-200/20" />
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-lg border border-mineral-200/55 bg-white/35" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-lg border border-mineral-200 bg-white shadow-[0_28px_80px_rgba(23,50,77,0.12)]">
+              <div className="absolute inset-0 technical-grid opacity-45" aria-hidden="true" />
+              <div className="absolute left-8 top-8 h-24 w-24 rounded-full border border-mineral-200/70" aria-hidden="true" />
+              <div className="absolute bottom-10 right-10 h-36 w-36 rounded-full border border-mineral-200/60" aria-hidden="true" />
+              <div className="relative flex min-h-[340px] flex-col items-center justify-center px-8 py-10 sm:min-h-[430px] lg:min-h-[520px]">
+                <div className="relative h-64 w-64 sm:h-80 sm:w-80 lg:h-[23rem] lg:w-[23rem]">
+                  <Image
+                    alt="Mikromed Europa S.L. logo"
+                    className="object-contain"
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 23rem, 20rem"
+                    src="/images/mikromed-logo.png"
+                  />
+                </div>
+                <p className="mt-6 text-center text-xs font-semibold uppercase tracking-[0.18em] text-mineral-500">
+                  Patented technologies - Functional formulations - Regulatory strategy
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -71,9 +85,9 @@ export default function Home() {
           {heroServiceCards.map((card) => {
             const Icon = card.icon;
             return (
-              <article className="rounded-lg border border-mineral-200 bg-white p-6 shadow-sm" key={card.title}>
+              <article className="rounded-lg border border-mineral-200/90 bg-white p-6 shadow-[0_10px_32px_rgba(23,50,77,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-mineral-500/45 hover:shadow-[0_20px_46px_rgba(23,50,77,0.10)]" key={card.title}>
                 {Icon ? (
-                  <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-mineral-50 text-forest-900">
+                  <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-mineral-50 text-forest-900 ring-1 ring-mineral-200/70">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </span>
                 ) : null}
@@ -143,9 +157,9 @@ export default function Home() {
           {collaborateCards.map((card) => {
             const Icon = card.icon;
             return (
-              <article className="rounded-lg border border-mineral-200 bg-white p-6 shadow-sm" key={card.title}>
+              <article className="rounded-lg border border-mineral-200/90 bg-white p-6 shadow-[0_10px_32px_rgba(23,50,77,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-mineral-500/45 hover:shadow-[0_20px_46px_rgba(23,50,77,0.10)]" key={card.title}>
                 {Icon ? (
-                  <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-mineral-50 text-forest-900">
+                  <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-mineral-50 text-forest-900 ring-1 ring-mineral-200/70">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </span>
                 ) : null}

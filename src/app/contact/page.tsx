@@ -48,8 +48,9 @@ const needOptions = [
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-forest-900 text-white">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-forest-900 text-white">
+        <div className="absolute inset-0 technical-grid-dark opacity-45" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">
             Contatti
           </p>
@@ -85,7 +86,7 @@ export default function ContactPage() {
               Il form è statico e pronto per essere collegato a endpoint, CRM o
               servizio email. I dettagli tecnici possono essere gestiti sotto NDA.
             </p>
-            <div className="mt-8 rounded-lg border border-mineral-200 bg-mineral-50 p-6">
+            <div className="mt-8 rounded-lg border border-mineral-200 bg-mineral-50 p-6 shadow-[0_10px_32px_rgba(23,50,77,0.06)]">
               <div className="flex items-start gap-3">
                 <Mail aria-hidden="true" className="mt-1 h-5 w-5 text-forest-900" />
                 <div>
@@ -96,7 +97,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form className="rounded-lg border border-mineral-200 bg-white p-6 shadow-soft">
+          <form className="rounded-lg border border-mineral-200 bg-white p-6 shadow-[0_20px_52px_rgba(23,50,77,0.10)]">
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="grid gap-2 text-sm font-medium text-mineral-900">
                 Nome
@@ -170,7 +171,7 @@ export default function ContactPage() {
               </label>
             </div>
             <button
-              className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-forest-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-900"
+              className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-forest-900 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_34px_rgba(23,50,77,0.18)] transition hover:bg-forest-800"
               type="button"
             >
               Invia richiesta

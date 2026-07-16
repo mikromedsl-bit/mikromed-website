@@ -20,39 +20,41 @@ export function Footer() {
   ]);
 
   return (
-    <footer className="border-t border-mineral-200 bg-white">
+    <footer className="border-t border-mineral-200 bg-forest-900 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="md:col-span-2">
-          <LogoMark />
-          <p className="mt-4 max-w-md text-sm leading-6 text-mineral-700">
+          <div className="inline-flex rounded-lg bg-white px-4 py-3 shadow-[0_18px_50px_rgba(0,0,0,0.18)]">
+            <LogoMark />
+          </div>
+          <p className="mt-5 max-w-md text-sm leading-6 text-forest-100">
             Tecnologie brevettate, formulazioni funzionali, consulenza
             regolatoria e supporto tecnico alla scrittura brevettuale.
           </p>
-          <p className="mt-5 text-sm text-mineral-500">
+          <p className="mt-5 text-sm text-mineral-200">
             {siteConfig.address}
           </p>
         </div>
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-900">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">
             Aree
           </h2>
           <ul className="mt-4 space-y-2">
             {areas.map((area) => (
-              <li className="text-sm text-mineral-700" key={area}>
+              <li className="text-sm text-forest-100" key={area}>
                 {area}
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-900">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">
             Link rapidi
           </h2>
           <ul className="mt-4 space-y-2">
             {footerLinks.map((item) => (
               <li key={item.href}>
                 <Link
-                  className="text-sm text-mineral-700 hover:text-forest-900"
+                  className="text-sm text-forest-100 transition hover:text-white"
                   href={item.href}
                 >
                   {item.label}
@@ -62,10 +64,10 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-mineral-200">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-sm text-mineral-500 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-sm text-mineral-200 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
           <span>(c) {new Date().getFullYear()} {siteConfig.name}. Tutti i diritti riservati.</span>
-          <span>{siteConfig.contactEmail} · {siteConfig.contactPhone}</span>
+          <span>{siteConfig.contactEmail} - {siteConfig.contactPhone}</span>
         </div>
       </div>
     </footer>

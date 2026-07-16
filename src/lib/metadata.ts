@@ -32,10 +32,10 @@ export function createMetadata({
       siteName: siteConfig.name,
       images: [
         {
-          url: "/images/mineral-technology-hero.png",
+          url: "/images/mikromed-logo.png",
           width: 1200,
-          height: 675,
-          alt: "Visual astratto di tecnologie minerali"
+          height: 1200,
+          alt: "Mikromed Europa S.L. logo"
         }
       ],
       locale: "it_IT",
