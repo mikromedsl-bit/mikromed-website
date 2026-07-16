@@ -50,27 +50,18 @@ export default function Home() {
               </ButtonLink>
             </div>
           </div>
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-lg border border-mineral-200/55 bg-white/35" aria-hidden="true" />
-            <div className="relative overflow-hidden rounded-lg border border-mineral-200 bg-white shadow-[0_28px_80px_rgba(23,50,77,0.12)]">
-              <div className="absolute inset-0 technical-grid opacity-45" aria-hidden="true" />
-              <div className="absolute left-8 top-8 h-24 w-24 rounded-full border border-mineral-200/70" aria-hidden="true" />
-              <div className="absolute bottom-10 right-10 h-36 w-36 rounded-full border border-mineral-200/60" aria-hidden="true" />
-              <div className="relative flex min-h-[340px] flex-col items-center justify-center px-8 py-10 sm:min-h-[430px] lg:min-h-[520px]">
-                <div className="relative h-64 w-64 sm:h-80 sm:w-80 lg:h-[23rem] lg:w-[23rem]">
-                  <Image
-                    alt="Mikromed Europa S.L. logo"
-                    className="object-contain"
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 23rem, 20rem"
-                    src="/images/mikromed-logo.png"
-                  />
-                </div>
-                <p className="mt-6 text-center text-xs font-semibold uppercase tracking-[0.18em] text-mineral-500">
-                  Patented technologies - Functional formulations - Regulatory strategy
-                </p>
-              </div>
+          <div className="relative flex min-h-[320px] items-center justify-center sm:min-h-[420px] lg:min-h-[520px]">
+            <div className="absolute h-[18rem] w-[18rem] rounded-full border border-mineral-200/65 sm:h-[24rem] sm:w-[24rem] lg:h-[30rem] lg:w-[30rem]" aria-hidden="true" />
+            <div className="absolute h-[13rem] w-[13rem] rounded-full border border-mineral-200/45 sm:h-[18rem] sm:w-[18rem] lg:h-[23rem] lg:w-[23rem]" aria-hidden="true" />
+            <div className="relative h-72 w-72 overflow-hidden rounded-full sm:h-96 sm:w-96 lg:h-[27rem] lg:w-[27rem]">
+              <Image
+                alt="Mikromed Europa S.L. logo"
+                className="object-cover"
+                fill
+                priority
+                sizes="(min-width: 1024px) 27rem, 24rem"
+                src="/images/mikromed-logo.png"
+              />
             </div>
           </div>
         </div>
