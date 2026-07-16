@@ -5,7 +5,7 @@ export function ProductCard({ item }: { item: ProductItem }) {
   const Icon = item.icon;
 
   return (
-    <article className="rounded-lg border border-mineral-200/90 bg-white p-6 shadow-[0_10px_32px_rgba(23,50,77,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-mineral-500/45 hover:shadow-[0_20px_46px_rgba(23,50,77,0.10)]">
+    <article className="premium-card rounded-lg p-6">
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mineral-500">
@@ -14,7 +14,7 @@ export function ProductCard({ item }: { item: ProductItem }) {
           <h3 className="mt-2 text-xl font-semibold text-forest-900">{item.title}</h3>
         </div>
         {Icon ? (
-          <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-mineral-50 text-forest-900 ring-1 ring-mineral-200/70">
+          <span className="premium-icon inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-forest-900">
             <Icon aria-hidden="true" className="h-5 w-5" />
           </span>
         ) : null}

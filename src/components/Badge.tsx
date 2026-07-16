@@ -7,10 +7,10 @@ type BadgeProps = {
 
 export function Badge({ children, tone = "default" }: BadgeProps) {
   const tones = {
-    default: "border-mineral-200 bg-white text-forest-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.85)]",
-    success: "border-mineral-200 bg-forest-50 text-forest-900",
-    warning: "border-mineral-200 bg-mineral-50 text-forest-800",
-    muted: "border-mineral-200 bg-white text-mineral-700"
+    default: "mikromed-badge text-forest-900",
+    success: "border-mineral-200 bg-forest-50 text-forest-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.86)]",
+    warning: "border-mineral-200 bg-[linear-gradient(180deg,#FFFFFF,#EDF1F4)] text-forest-800",
+    muted: "border-mineral-200 bg-white/85 text-mineral-700"
   };
 
   return (

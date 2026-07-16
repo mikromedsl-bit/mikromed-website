@@ -18,9 +18,9 @@ import {
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#FFFFFF_0%,#F7F9FA_52%,#EDF1F4_100%)]">
+      <section className="relative overflow-hidden gradient-hero">
         <div className="absolute inset-0 technical-grid opacity-55" aria-hidden="true" />
-        <div className="absolute -right-28 top-20 h-72 w-72 rounded-full border border-mineral-200/60" aria-hidden="true" />
+        <div className="absolute -right-28 top-20 h-72 w-72 rounded-full border border-mineral-200/60 bg-white/20" aria-hidden="true" />
         <div className="absolute bottom-16 right-20 h-40 w-40 rounded-full border border-mineral-200/50" aria-hidden="true" />
         <div className="relative mx-auto grid min-h-[calc(100vh-4.75rem)] max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-20">
           <div className="max-w-3xl">
@@ -50,8 +50,8 @@ export default function Home() {
               </ButtonLink>
             </div>
           </div>
-          <div className="relative flex min-h-[320px] items-center justify-center sm:min-h-[420px] lg:min-h-[520px]">
-            <div className="absolute h-[18rem] w-[18rem] rounded-full border border-mineral-200/65 sm:h-[24rem] sm:w-[24rem] lg:h-[30rem] lg:w-[30rem]" aria-hidden="true" />
+          <div className="hero-logo-orbit relative flex min-h-[320px] items-center justify-center sm:min-h-[420px] lg:min-h-[520px]">
+            <div className="absolute h-[18rem] w-[18rem] rounded-full border border-mineral-200/65 bg-white/15 sm:h-[24rem] sm:w-[24rem] lg:h-[30rem] lg:w-[30rem]" aria-hidden="true" />
             <div className="absolute h-[13rem] w-[13rem] rounded-full border border-mineral-200/45 sm:h-[18rem] sm:w-[18rem] lg:h-[23rem] lg:w-[23rem]" aria-hidden="true" />
             <div className="relative h-72 w-72 overflow-hidden rounded-full sm:h-96 sm:w-96 lg:h-[27rem] lg:w-[27rem]">
               <Image
@@ -76,9 +76,9 @@ export default function Home() {
           {heroServiceCards.map((card) => {
             const Icon = card.icon;
             return (
-              <article className="rounded-lg border border-mineral-200/90 bg-white p-6 shadow-[0_10px_32px_rgba(23,50,77,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-mineral-500/45 hover:shadow-[0_20px_46px_rgba(23,50,77,0.10)]" key={card.title}>
+              <article className="premium-card rounded-lg p-6" key={card.title}>
                 {Icon ? (
-                  <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-mineral-50 text-forest-900 ring-1 ring-mineral-200/70">
+                  <span className="premium-icon mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg text-forest-900">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </span>
                 ) : null}
@@ -97,9 +97,9 @@ export default function Home() {
         eyebrow="Credibilita"
         title="Numeri e asset da valorizzare"
         description="Il portafoglio brevettuale Mikromed e la base tecnologica dei prodotti, delle piattaforme e delle collaborazioni con partner selezionati."
-        tone="muted"
+        tone="dark"
       >
-        <CardGrid items={statBlocks} columns="five" />
+        <CardGrid items={statBlocks} columns="five" dark />
       </Section>
 
       <Section
@@ -148,9 +148,9 @@ export default function Home() {
           {collaborateCards.map((card) => {
             const Icon = card.icon;
             return (
-              <article className="rounded-lg border border-mineral-200/90 bg-white p-6 shadow-[0_10px_32px_rgba(23,50,77,0.06)] transition duration-200 hover:-translate-y-0.5 hover:border-mineral-500/45 hover:shadow-[0_20px_46px_rgba(23,50,77,0.10)]" key={card.title}>
+              <article className="premium-card rounded-lg p-6" key={card.title}>
                 {Icon ? (
-                  <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-mineral-50 text-forest-900 ring-1 ring-mineral-200/70">
+                  <span className="premium-icon mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg text-forest-900">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </span>
                 ) : null}

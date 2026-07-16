@@ -12,7 +12,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-mineral-200/80 bg-white/[0.92] shadow-[0_1px_0_rgba(23,50,77,0.03)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-mineral-200/70 bg-white/[0.88] shadow-[0_10px_34px_rgba(15,38,61,0.06)] backdrop-blur-xl">
       <nav
         aria-label="Navigazione principale"
         className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-6 lg:px-8"
@@ -39,7 +39,7 @@ export function Header() {
                 <Link
                   className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${
                     active
-                      ? "bg-mineral-50 text-forest-900 shadow-[inset_0_0_0_1px_rgba(190,198,205,0.75)]"
+                      ? "bg-[linear-gradient(180deg,#FFFFFF,#EDF1F4)] text-forest-900 shadow-[inset_0_0_0_1px_rgba(190,198,205,0.85)]"
                       : "text-mineral-700 hover:bg-mineral-50 hover:text-forest-900"
                   }`}
                   href={item.href}

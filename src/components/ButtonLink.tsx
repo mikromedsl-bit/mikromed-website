@@ -13,12 +13,9 @@ export function ButtonLink({
   variant = "primary"
 }: ButtonLinkProps) {
   const variants = {
-    primary:
-      "bg-forest-900 text-white shadow-[0_16px_34px_rgba(23,50,77,0.18)] hover:bg-forest-800 focus-visible:outline-forest-800",
-    secondary:
-      "border border-mineral-200 bg-white text-forest-900 shadow-sm hover:border-forest-800 hover:bg-mineral-50 focus-visible:outline-copper-500",
-    light:
-      "border border-white/35 bg-white text-forest-900 shadow-sm hover:bg-mineral-100 focus-visible:outline-copper-300",
+    primary: "mikromed-button-primary focus-visible:outline-forest-800",
+    secondary: "mikromed-button-secondary focus-visible:outline-copper-500",
+    light: "mikromed-button-light focus-visible:outline-copper-300",
     ghost:
       "text-forest-900 hover:text-copper-700 focus-visible:outline-copper-500"
   };

@@ -20,9 +20,10 @@ export function Footer() {
   ]);
 
   return (
-    <footer className="border-t border-mineral-200 bg-forest-900 text-white">
+    <footer className="relative overflow-hidden border-t border-mineral-200 gradient-navy text-white">
+      <div className="absolute inset-0 technical-grid-dark opacity-35" aria-hidden="true" />
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-6 md:grid-cols-4 lg:px-8">
-        <div className="md:col-span-2">
+        <div className="relative md:col-span-2">
           <div className="inline-flex rounded-lg bg-white px-4 py-3 shadow-[0_18px_50px_rgba(0,0,0,0.18)]">
             <LogoMark />
           </div>
@@ -34,7 +35,7 @@ export function Footer() {
             {siteConfig.address}
           </p>
         </div>
-        <div>
+        <div className="relative">
           <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">
             Aree
           </h2>
@@ -46,7 +47,7 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="relative">
           <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">
             Link rapidi
           </h2>
@@ -64,7 +65,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-sm text-mineral-200 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
           <span>(c) {new Date().getFullYear()} {siteConfig.name}. Tutti i diritti riservati.</span>
           <span>{siteConfig.contactEmail} - {siteConfig.contactPhone}</span>

@@ -6,7 +6,7 @@ export function PatentCard({ patent }: { patent: PatentItem }) {
   const isGranted = patent.status === "Concesso";
 
   return (
-    <article className="rounded-lg border border-mineral-200/90 bg-white p-6 shadow-[0_10px_32px_rgba(23,50,77,0.06)] transition duration-200 hover:border-mineral-500/45 hover:shadow-[0_20px_46px_rgba(23,50,77,0.10)]">
+    <article className="premium-card rounded-lg p-6">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div>
           <div className="flex flex-wrap gap-2">
@@ -17,7 +17,7 @@ export function PatentCard({ patent }: { patent: PatentItem }) {
           <h3 className="mt-4 text-2xl font-semibold text-forest-900">{patent.shortTitle}</h3>
           <p className="mt-3 text-sm leading-6 text-mineral-700">{patent.summary}</p>
         </div>
-        <div className="shrink-0 rounded-lg border border-mineral-200/75 bg-mineral-50 p-4 text-sm text-mineral-700 lg:w-64">
+        <div className="shrink-0 rounded-lg border border-mineral-200/75 bg-[linear-gradient(180deg,#F7F9FA,#EDF1F4)] p-4 text-sm text-mineral-700 lg:w-64">
           <p>
             <span className="font-semibold text-forest-900">Concessione:</span> {patent.grantDate}
           </p>
@@ -27,7 +27,7 @@ export function PatentCard({ patent }: { patent: PatentItem }) {
         </div>
       </div>
 
-      <div className="mt-6 rounded-lg border border-mineral-200/70 bg-mineral-50 p-4">
+      <div className="mt-6 rounded-lg border border-mineral-200/70 bg-[linear-gradient(180deg,#FFFFFF,#F7F9FA)] p-4">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mineral-500">
           Titolo ufficiale brevetto
         </p>

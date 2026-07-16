@@ -48,7 +48,7 @@ const needOptions = [
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-forest-900 text-white">
+      <section className="relative overflow-hidden gradient-navy text-white">
         <div className="absolute inset-0 technical-grid-dark opacity-45" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8 lg:py-24">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">
