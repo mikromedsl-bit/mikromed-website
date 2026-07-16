@@ -2,16 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CardGrid } from "@/components/CardGrid";
+import { CTASection } from "@/components/CTASection";
 import { ProductGrid } from "@/components/ProductGrid";
 import { Section } from "@/components/Section";
-import { developedProducts, agriculturalPlatforms } from "@/data/products";
-import { regulatoryCards } from "@/data/services";
-import { patentSupportCards } from "@/data/site";
+import { homepageProducts } from "@/data/products";
 import {
   buildWithPatents,
   collaborateCards,
   heroServiceCards,
   statBlocks,
+  technologyFields,
   whatMikromedDoes
 } from "@/data/site";
 
@@ -26,21 +26,20 @@ export default function Home() {
               Mikromed Europa S.L.
             </p>
             <h1 className="mt-5 text-4xl font-semibold tracking-normal text-forest-900 text-balance sm:text-5xl lg:text-6xl">
-              Brevetti, prodotti e collaborazioni per mercati regolati.
+              Brevetti approvati, prodotti sviluppati e collaborazioni industriali.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-mineral-700">
-              Mikromed Europa sviluppa tecnologie brevettate e prodotti propri
-              nei settori agricoltura, superfici, animal care e formulazioni
-              funzionali. Collabora inoltre con aziende e partner industriali
-              per creare nuovi prodotti, definire strategie regolatorie e
-              sviluppare nuovi brevetti.
+              Mikromed Europa valorizza un portafoglio di brevetti concessi e
+              tecnologie funzionali, trasformandoli in prodotti, piattaforme
+              applicative e opportunita di collaborazione nei settori superfici,
+              coating, oral care, agricoltura, gestione idrica e applicazioni
+              tecniche.
             </p>
             <p className="mt-4 text-base font-semibold text-forest-800">
-              Dalla proprietà intellettuale allo sviluppo prodotto, dal
-              posizionamento regolatorio alla collaborazione industriale.
+              Brevetti approvati, prodotti sviluppati e collaborazioni industriali per mercati regolati.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ButtonLink href="/patents">Scopri i nostri brevetti</ButtonLink>
+              <ButtonLink href="/patents">Scopri i brevetti</ButtonLink>
               <ButtonLink href="/products-projects" variant="secondary">
                 Esplora i prodotti
               </ButtonLink>
@@ -51,7 +50,7 @@ export default function Home() {
           </div>
           <div className="relative min-h-[360px] overflow-hidden rounded-lg border border-mineral-200 shadow-soft lg:min-h-[520px]">
             <Image
-              alt="Visual astratto di tecnologie minerali e laboratorio"
+              alt="Visual di tecnologie minerali e laboratorio"
               className="h-full w-full object-cover"
               fill
               priority
@@ -64,9 +63,9 @@ export default function Home() {
       </section>
 
       <Section
-        eyebrow="Aree principali"
-        title="Brevetti propri, prodotti Mikromed e collaborazioni industriali"
-        description="Mikromed non è solo consulenza e non è un catalogo prodotti. È una società tecnologica europea con proprietà intellettuale, prodotti propri e capacità di collaborazione industriale."
+        eyebrow="Mappa Mikromed"
+        title="Proprieta intellettuale, prodotti e collaborazione industriale"
+        description="Mikromed non e solo consulenza e non e solo un catalogo prodotti: e una societa tecnologica europea con brevetti propri, prodotti sviluppati e capacita di collaborazione industriale."
       >
         <div className="grid gap-5 lg:grid-cols-3">
           {heroServiceCards.map((card) => {
@@ -90,43 +89,55 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="Credibilità"
-        title="Proprietà intellettuale, prodotti e competenze applicate"
-        description="Il portafoglio brevettuale Mikromed è la base tecnologica dei nostri prodotti e delle collaborazioni sviluppate con partner selezionati."
+        eyebrow="Credibilita"
+        title="Numeri e asset da valorizzare"
+        description="Il portafoglio brevettuale Mikromed e la base tecnologica dei prodotti, delle piattaforme e delle collaborazioni con partner selezionati."
         tone="muted"
       >
         <CardGrid items={statBlocks} columns="five" />
       </Section>
 
       <Section
+        eyebrow="Dal brevetto al prodotto"
+        title="Una piattaforma, piu percorsi applicativi"
+        description="Ogni brevetto Mikromed viene analizzato come piattaforma applicativa: cosa protegge, quali settori puo raggiungere, quali prodotti sono gia collegati e quali opportunita restano aperte."
+      >
+        <CardGrid items={buildWithPatents} columns="five" />
+      </Section>
+
+      <Section
+        eyebrow="Le aree principali"
+        title="Dove applicare le tecnologie Mikromed"
+        description="Le aree applicative vengono sempre trattate con valutazione tecnica, test e posizionamento regolatorio specifico."
+        tone="muted"
+      >
+        <CardGrid items={technologyFields} />
+      </Section>
+
+      <Section
+        eyebrow="Prodotti sviluppati"
+        title="Prodotti e piattaforme principali"
+        description="In homepage mostriamo solo i progetti principali. La pagina prodotti contiene la mappa completa con status, brevetti collegati e opportunita."
+      >
+        <ProductGrid items={homepageProducts} />
+        <div className="mt-10">
+          <ButtonLink href="/products-projects">Vedi tutti i prodotti e le opportunita</ButtonLink>
+        </div>
+      </Section>
+
+      <Section
         eyebrow="Cosa fa Mikromed"
-        title="Tecnologie proprie, prodotti e collaborazione industriale"
-        description="Il posizionamento Mikromed nasce dall'integrazione tra proprietà intellettuale, sviluppo di piattaforme e lavoro con partner selezionati."
+        title="Tecnologie proprie, prodotti e servizi collegati"
+        description="Il posizionamento Mikromed nasce dall'integrazione tra proprieta intellettuale, sviluppo di piattaforme e lavoro con partner selezionati."
+        tone="muted"
       >
         <CardGrid items={whatMikromedDoes} />
       </Section>
 
       <Section
-        eyebrow="I nostri prodotti e piattaforme"
-        title="Prodotti e piattaforme sviluppate da Mikromed"
-        description="Mikromed sviluppa prodotti, concept e piattaforme tecnologiche basate sul proprio know-how. Alcune soluzioni sono già attive in mercati selezionati, altre sono disponibili per sviluppo, licenza o partnership."
-        tone="muted"
-      >
-        <ProductGrid items={[...developedProducts, ...agriculturalPlatforms]} />
-        <p className="mt-6 max-w-4xl text-sm leading-6 text-mineral-600">
-          La disponibilità commerciale, eventuali esclusive territoriali e
-          modelli di partnership vengono valutati caso per caso. I partner
-          esistenti non vengono divulgati pubblicamente.
-        </p>
-        <div className="mt-10">
-          <ButtonLink href="/products-projects">Vedi prodotti e opportunità</ButtonLink>
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Collabora con Mikromed"
-        title="Collaborazioni per nuovi prodotti, nuove soluzioni e nuovi brevetti"
-        description="Oltre allo sviluppo dei propri prodotti, Mikromed collabora con aziende, distributori, laboratori e partner industriali per creare nuove soluzioni tecniche, nuovi prodotti e nuovi percorsi brevettuali."
+        eyebrow="Collaborazioni"
+        title="Collabora con Mikromed"
+        description="Se hai un mercato, un brand, un canale distributivo o un'esigenza tecnica, Mikromed puo valutare l'accesso a tecnologie brevettate, lo sviluppo di prodotti su misura, il licensing o la collaborazione regolatoria."
       >
         <div className="grid gap-5 lg:grid-cols-3">
           {collaborateCards.map((card) => {
@@ -149,69 +160,12 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section
-        eyebrow="Collaborazione tecnica"
-        title="Tu hai il mercato. Noi possiamo mettere la tecnologia."
-        description="Quando un partner conosce il proprio mercato ma ha bisogno di una tecnologia protetta, di una formulazione funzionale o di un percorso regolatorio coerente, Mikromed può intervenire come partner tecnico e strategico."
-        tone="muted"
-      >
-        <CardGrid items={buildWithPatents} />
-        <div className="mt-10">
-          <ButtonLink href="/collaborate">Avvia una collaborazione</ButtonLink>
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Servizi regolatori"
-        title="Consulenza regolatoria e strategia claim"
-        description="Una buona formulazione non basta. Un prodotto deve essere posizionato, etichettato e comunicato correttamente prima di arrivare sul mercato. Mikromed supporta partner e progetti interni nella definizione di claim utilizzabili, etichette coerenti e percorsi regolatori sostenibili."
-      >
-        <CardGrid items={regulatoryCards} />
-        <div className="mt-10">
-          <ButtonLink href="/regulatory-claims">Richiedi consulenza regolatoria</ButtonLink>
-        </div>
-      </Section>
-
-      <Section
-        eyebrow="Brevetti"
-        title="Brevetti propri e supporto a nuovi progetti brevettuali"
-        description="Mikromed sviluppa e valorizza il proprio portafoglio brevettuale. Inoltre, può supportare aziende e inventori nella strutturazione tecnica di nuove idee brevettabili, nella preparazione della bozza tecnica e nel percorso documentale verso la concessione."
-        tone="muted"
-      >
-        <CardGrid items={patentSupportCards} />
-        <div className="mt-10">
-          <ButtonLink href="/patent-writing">Parla di un progetto brevettuale</ButtonLink>
-        </div>
-      </Section>
-
-      <section className="bg-forest-900 text-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">
-              Prossimo passo
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-normal text-balance">
-              Brevetto, prodotto o collaborazione?
-            </h2>
-            <p className="mt-4 max-w-3xl text-lg leading-8 text-mineral-100">
-              Che tu voglia conoscere le tecnologie Mikromed, valutare un
-              prodotto già sviluppato o proporre una nuova collaborazione,
-              possiamo costruire il percorso più adatto.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <ButtonLink href="/products-projects" variant="light">
-              Scopri i prodotti
-            </ButtonLink>
-            <ButtonLink href="/collaborate" variant="light">
-              Avvia una collaborazione
-            </ButtonLink>
-            <ButtonLink href="/contact" variant="light">
-              Richiedi una consulenza
-            </ButtonLink>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        description="Che tu voglia conoscere una tecnologia, valutare un prodotto sviluppato o proporre una collaborazione, possiamo costruire un percorso tecnico e regolatorio coerente."
+        href="/contact"
+        label="Contatta Mikromed"
+        title="Brevetto, prodotto o collaborazione?"
+      />
     </>
   );
 }

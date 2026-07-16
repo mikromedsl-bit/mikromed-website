@@ -3,8 +3,8 @@ import type { NavItem } from "@/data/types";
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Brevetti e Tecnologie", href: "/patents" },
-  { label: "Prodotti e Opportunità", href: "/products-projects" },
   { label: "Applicazioni", href: "/applications" },
+  { label: "Prodotti e Opportunita", href: "/products-projects" },
   { label: "Collabora con noi", href: "/collaborate" },
   {
     label: "Servizi",

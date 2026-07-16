@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { CardGrid } from "@/components/CardGrid";
-import { PatentTable } from "@/components/PatentTable";
+import { CTASection } from "@/components/CTASection";
+import { PatentCard } from "@/components/PatentCard";
 import { Section } from "@/components/Section";
-import { grantedPatents, pendingPatents, patentPortfolioSummary } from "@/data/patents";
+import { grantedPatents, patentPortfolioSummary, pendingPatents } from "@/data/patents";
 import { pages } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function PatentsPage() {
-  const [portfolio, granted, pending, fields] = page.sections;
+  const [portfolio, , , fields] = page.sections;
 
   return (
     <>
@@ -35,34 +36,49 @@ export default function PatentsPage() {
       </section>
 
       <Section
-        title="Panoramica del portafoglio"
-        description={`${page.intro} Totale report: ${patentPortfolioSummary.granted} brevetti concessi e ${patentPortfolioSummary.pending} domande in procedura/interlocutorie.`}
+        title="Numeri del portafoglio"
+        description={`${page.intro} Totale attuale: ${patentPortfolioSummary.granted} brevetti concessi e ${patentPortfolioSummary.pending} domande pubblicate o in valutazione.`}
       >
         <CardGrid items={portfolio.items} />
       </Section>
 
       <Section
-        title={granted.title}
-        description="Brevetti indicati come concessi nei documenti locali verificati."
+        title="Brevetti concessi"
+        description="Brevetti approvati da presentare come piattaforme tecnologiche applicabili a prodotti propri, licensing, white label e collaborazioni industriali."
         tone="muted"
       >
-        <PatentTable patents={grantedPatents} />
+        <div className="space-y-6">
+          {grantedPatents.map((patent) => (
+            <PatentCard key={patent.internalId} patent={patent} />
+          ))}
+        </div>
       </Section>
 
       <Section
-        title={pending.title}
-        description="Domande ancora pendenti o con interlocutorie: non sono presentate come brevetti concessi."
+        title="Domande pubblicate e progetti in valutazione"
+        description="Oltre ai brevetti concessi, Mikromed monitora domande pubblicate e tecnologie in valutazione. Questi progetti non devono essere presentati come brevetti concessi."
       >
-        <PatentTable patents={pendingPatents} />
+        <div className="space-y-6">
+          {pendingPatents.map((patent) => (
+            <PatentCard key={patent.internalId} patent={patent} />
+          ))}
+        </div>
       </Section>
 
       <Section
         title={fields.title}
-        description="Campi tecnologici e applicativi derivati dai brevetti, dalle domande e dai documenti prodotto collegati."
+        description="Campi tecnologici e applicativi derivati dai brevetti, dalle domande pubblicate e dai documenti prodotto collegati."
         tone="muted"
       >
         <CardGrid items={fields.items} />
       </Section>
+
+      <CTASection
+        description="Possiamo valutare applicazioni possibili, accesso tecnico sotto NDA, licensing o co-sviluppo industriale."
+        href="/collaborate"
+        label="Collabora con noi"
+        title="Vuoi approfondire una tecnologia Mikromed?"
+      />
     </>
   );
 }

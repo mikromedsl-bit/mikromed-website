@@ -12,6 +12,8 @@ export type CardItem = {
   icon?: LucideIcon;
 };
 
+export type BadgeTone = "default" | "success" | "warning" | "muted";
+
 export type PageContent = {
   slug: string;
   title: string;
@@ -45,18 +47,37 @@ export type ProductGroup = {
 };
 
 export type PatentItem = {
+  internalId: string;
   title: string;
+  officialTitle: string;
+  shortTitle: string;
   applicationNumber: string;
   publicationOrGrant: string;
   holder: string;
   inventors: string;
   filingDate: string;
   grantDate: string;
-  status: "Concesso" | "Domanda in procedura" | "Interlocutoria";
+  status:
+    | "Concesso"
+    | "Domanda pubblicata"
+    | "Domanda pubblicata / in esame"
+    | "Domanda pubblicata / stato da verificare";
   territories: string;
   summary: string;
+  sectors: string[];
+  applicationExamples: string[];
+  linkedProducts: string[];
+  opportunities: string[];
+  publicNote: string;
   applications: string;
   relatedProducts: string;
   publicLink?: string;
   localSource: string;
+};
+
+export type ApplicationArea = CardItem & {
+  linkedPatents: string[];
+  applicationExamples: string[];
+  linkedProducts: string[];
+  note?: string;
 };
