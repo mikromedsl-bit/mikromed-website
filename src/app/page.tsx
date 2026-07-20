@@ -63,17 +63,15 @@ export default function Home() {
       </section>
 
       <Section
-        eyebrow="Dal brevetto all'applicazione"
-        title="Una piattaforma, piu percorsi applicativi"
-        description="Ogni brevetto Mikromed viene analizzato come piattaforma applicativa: cosa protegge, quali settori puo raggiungere e quali percorsi tecnici possono essere valutati con partner selezionati."
+        title="Dal brevetto all'applicazione"
+        description="Ogni tecnologia Mikromed viene valutata come piattaforma applicativa: dal brevetto alla possibile applicazione tecnica, fino allo sviluppo e al corretto posizionamento regolatorio."
       >
         <CardGrid items={buildWithPatents} columns="two" />
       </Section>
 
       <Section
-        eyebrow="Brevetti e tecnologie"
-        title="Brevetti e tecnologie"
-        description="Una panoramica essenziale del portafoglio Mikromed, con brevetti concessi e domande pubblicate presentati senza confondere gli stati."
+        title="Brevetti e tecnologie proprietarie"
+        description="Mikromed Europa valorizza un portafoglio di brevetti concessi e tecnologie funzionali. Ogni brevetto rappresenta una base tecnica che puo essere sviluppata, concessa in licenza o integrata in progetti industriali selezionati."
         tone="muted"
       >
         <ButtonLink href="/patents" variant="secondary">
@@ -82,9 +80,8 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="Applicazioni"
-        title="Applicazioni"
-        description="Le applicazioni sono organizzate per brevetto, con settori possibili, scenari sviluppabili, partner potenzialmente interessati e note regolatorie."
+        title="Applicazioni dei brevetti Mikromed"
+        description="Le applicazioni sono organizzate per brevetto, mostrando i possibili settori di utilizzo, gli scenari sviluppabili e i partner potenzialmente interessati."
       >
         <ButtonLink href="/applications" variant="secondary">
           Esplora le applicazioni
@@ -92,9 +89,7 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="Servizi"
-        title="Consulenza regolatoria, sviluppo prodotto e scrittura brevetti"
-        description="I servizi Mikromed supportano applicazioni e collaborazioni industriali con documentazione tecnica, strategia claim e strutturazione brevettuale."
+        title="Servizi tecnici e regolatori"
       >
         <CardGrid items={serviceOverviewCards} />
       </Section>

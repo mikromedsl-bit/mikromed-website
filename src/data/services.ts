@@ -113,19 +113,19 @@ export const serviceOverviewCards: CardItem[] = [
   {
     title: "Consulenza regolatoria",
     description:
-      "Claim, etichette, posizionamento prodotto, documentazione tecnica e check pre-lancio.",
+      "Supporto su claim, etichette, categoria prodotto, documentazione tecnica e comunicazione conforme.",
     icon: ShieldCheck
   },
   {
     title: "Sviluppo prodotto",
     description:
-      "Valutazione dell'idea, percorso formulativo, logica del prototipo e concept partner-ready.",
+      "Supporto nello sviluppo di formulazioni, prototipi, concept tecnici e percorsi applicativi.",
     icon: Beaker
   },
   {
     title: "Scrittura brevetti",
     description:
-      "Supporto tecnico alla bozza brevettuale, alla logica inventiva e al percorso verso la concessione.",
+      "Supporto tecnico alla strutturazione dell'invenzione, alla bozza brevettuale e al percorso documentale.",
     icon: PenTool
   }
 ];

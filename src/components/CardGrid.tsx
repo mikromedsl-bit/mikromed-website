@@ -2,7 +2,7 @@ import type { CardItem } from "@/data/types";
 
 type CardGridProps = {
   items: CardItem[];
-  columns?: "two" | "three" | "four" | "five";
+  columns?: "two" | "three" | "four";
   dark?: boolean;
 };
 
@@ -10,8 +10,7 @@ export function CardGrid({ items, columns = "three", dark = false }: CardGridPro
   const grid = {
     two: "md:grid-cols-2",
     three: "lg:grid-cols-3",
-    four: "lg:grid-cols-4",
-    five: "lg:grid-cols-5"
+    four: "lg:grid-cols-4"
   };
 
   return (

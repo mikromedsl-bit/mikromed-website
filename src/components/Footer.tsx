@@ -3,16 +3,6 @@ import { LogoMark } from "@/components/LogoMark";
 import { navItems } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 
-const areas = [
-  "Agricoltura e suolo",
-  "Animal care e lettiere",
-  "Mangimi e additivi minerali",
-  "Superfici e coatings",
-  "Home & Professional Care",
-  "R&D industriale",
-  "Scrittura brevetti"
-];
-
 export function Footer() {
   const footerLinks = navItems.slice(1).flatMap((item) => [
     item,
@@ -22,8 +12,8 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-mineral-200 gradient-navy text-white">
       <div className="absolute inset-0 technical-grid-dark opacity-35" aria-hidden="true" />
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-6 md:grid-cols-4 lg:px-8">
-        <div className="relative md:col-span-2">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-6 md:grid-cols-[1.2fr_0.8fr] lg:px-8">
+        <div className="relative">
           <div className="inline-flex rounded-lg bg-white px-4 py-3 shadow-[0_18px_50px_rgba(0,0,0,0.18)]">
             <LogoMark />
           </div>
@@ -34,18 +24,6 @@ export function Footer() {
           <p className="mt-5 text-sm text-mineral-200">
             {siteConfig.address}
           </p>
-        </div>
-        <div className="relative">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">
-            Aree
-          </h2>
-          <ul className="mt-4 space-y-2">
-            {areas.map((area) => (
-              <li className="text-sm text-forest-100" key={area}>
-                {area}
-              </li>
-            ))}
-          </ul>
         </div>
         <div className="relative">
           <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-mineral-200">

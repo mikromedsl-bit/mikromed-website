@@ -28,29 +28,23 @@ export const siteConfig = {
   address: "Operativita europea - dati di contatto da confermare"
 };
 
-export const heroServiceCards: (CardItem & { href: string; label: string })[] = [
+export const heroServiceCards: CardItem[] = [
   {
     title: "Consulenza regolatoria",
     description:
       "Claim, etichette, classificazione prodotto, documentazione tecnica e posizionamento.",
-    href: "/regulatory-claims",
-    label: "Richiedi consulenza",
     icon: ShieldCheck
   },
   {
     title: "Tecnologie brevettate",
     description:
       "Brevetti concessi, piattaforme funzionali e applicazioni sviluppabili con partner selezionati.",
-    href: "/patents",
-    label: "Esplora le tecnologie",
     icon: FileLock2
   },
   {
     title: "Prodotti e formulazioni proprietarie",
     description:
       "Soluzioni sviluppate da Mikromed sulla base di tecnologie, formulazioni e know-how interni.",
-    href: "/product-development",
-    label: "Sviluppo prodotto",
     icon: Beaker
   }
 ];
