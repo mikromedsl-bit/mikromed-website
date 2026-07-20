@@ -6,13 +6,15 @@ type MetadataInput = {
   description: string;
   path?: string;
   keywords?: string[];
+  includeGlobalKeywords?: boolean;
 };
 
 export function createMetadata({
   title,
   description,
   path = "",
-  keywords = []
+  keywords = [],
+  includeGlobalKeywords = true
 }: MetadataInput): Metadata {
   const fullTitle =
     title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
@@ -21,7 +23,7 @@ export function createMetadata({
     title: fullTitle,
     description,
     metadataBase: new URL(siteConfig.url),
-    keywords: Array.from(new Set([...keywords, ...globalKeywords])),
+    keywords: Array.from(new Set(includeGlobalKeywords ? [...keywords, ...globalKeywords] : keywords)),
     alternates: {
       canonical: `${siteConfig.url}${path}`
     },

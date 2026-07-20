@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { ApplicationCard } from "@/components/ApplicationCard";
 import { CTASection } from "@/components/CTASection";
+import { PatentApplicationCard, PendingApplicationCard } from "@/components/PatentApplicationCard";
 import { Section } from "@/components/Section";
-import { applications } from "@/data/applications";
+import { patentApplications, pendingApplications } from "@/data/applications";
 import { pages } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -12,7 +12,8 @@ export const metadata: Metadata = createMetadata({
   title: page.title,
   description: page.description,
   path: "/applications",
-  keywords: page.keywords
+  keywords: page.keywords,
+  includeGlobalKeywords: false
 });
 
 export default function ApplicationsPage() {
@@ -34,12 +35,24 @@ export default function ApplicationsPage() {
       </section>
 
       <Section
-        title="Macrosettori applicativi"
+        title="Applicazioni organizzate per brevetto"
         description={page.intro}
       >
-        <div className="grid gap-6 lg:grid-cols-2">
-          {applications.map((application) => (
-            <ApplicationCard item={application} key={application.title} />
+        <div className="space-y-6">
+          {patentApplications.map((application) => (
+            <PatentApplicationCard item={application} key={application.patentId} />
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        title="Tecnologie in valutazione"
+        description="Le domande pubblicate e le tecnologie in valutazione possono aprire ulteriori campi applicativi, ma non devono essere presentate come brevetti concessi."
+        tone="muted"
+      >
+        <div className="grid gap-5 lg:grid-cols-3">
+          {pendingApplications.map((application) => (
+            <PendingApplicationCard item={application} key={application.patentId} />
           ))}
         </div>
       </Section>

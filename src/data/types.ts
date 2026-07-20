@@ -81,3 +81,24 @@ export type ApplicationArea = CardItem & {
   partnerTypes: string[];
   regulatoryNote: string;
 };
+
+export type PatentApplicationItem = {
+  patentId: string;
+  patentNumber: string;
+  publicationNumber?: string;
+  shortTitle: string;
+  description: string;
+  possibleSectors: string[];
+  developableApplications: string[];
+  potentialPartners: string[];
+  regulatoryNote: string;
+};
+
+export type PendingApplicationItem = {
+  patentId: string;
+  shortTitle: string;
+  applicationNumber: string;
+  status: string;
+  interestArea: string;
+  note: string;
+};

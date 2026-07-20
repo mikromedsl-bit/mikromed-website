@@ -10,7 +10,6 @@ import {
   ShieldCheck,
   TestTube2
 } from "lucide-react";
-import { applications } from "@/data/applications";
 import { patentPortfolioSummary } from "@/data/patents";
 import { productGroups } from "@/data/products";
 import {
@@ -297,13 +296,13 @@ export const pages: Record<string, PageContent> = {
   applications: {
     slug: "applications",
     eyebrow: "Applicazioni",
-    title: "Applicazioni delle tecnologie Mikromed",
+    title: "Applicazioni dei brevetti Mikromed",
     description:
-      "Le tecnologie Mikromed possono essere adattate a diversi settori applicativi. Ogni applicazione richiede valutazione tecnica, test e posizionamento regolatorio specifico.",
+      "Ogni brevetto Mikromed rappresenta una piattaforma tecnologica che puo essere adattata a diversi settori applicativi. Le applicazioni vengono valutate in base a funzione tecnica, destinazione d'uso, test disponibili e posizionamento regolatorio.",
     intro:
-      "Questa pagina raccoglie settori possibili, scenari di utilizzo, mercati potenziali, categorie di partner, collegamento ai brevetti rilevanti e attenzione regolatoria.",
-    keywords: ["superfici", "coating", "oral care", "agricoltura", "gestione idrica", "animal care"],
-    sections: [{ title: "Campi applicativi", items: applications }]
+      "In questa sezione le applicazioni sono organizzate per brevetto. Per ogni tecnologia vengono indicati i possibili ambiti di utilizzo, le categorie di sviluppo e i partner industriali potenzialmente interessati, senza esporre nomi commerciali o accordi riservati.",
+    keywords: ["applicazioni brevetti", "settori applicativi", "sviluppo con partner", "licensing tecnologia"],
+    sections: [{ title: "Applicazioni organizzate per brevetto", items: [] }]
   },
   "products-projects": {
     slug: "products-projects",
