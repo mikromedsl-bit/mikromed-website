@@ -165,7 +165,7 @@ export const buildWithPatents: CardItem[] = [
 export const patentPortfolioCards: CardItem[] = [
   {
     title: "5 brevetti concessi",
-    description: `${patentPortfolioSummary.granted} brevetti approvati, presentati come piattaforme tecnologiche e non come claim commerciali automatici.`,
+    description: `${patentPortfolioSummary.granted} brevetti approvati, presentati in modo istituzionale come basi tecniche proprietarie.`,
     icon: BadgeCheck
   },
   {
@@ -174,15 +174,15 @@ export const patentPortfolioCards: CardItem[] = [
     icon: FileLock2
   },
   {
-    title: "Applicazioni multisettore",
+    title: "Informazioni essenziali",
     description:
-      "Superfici, coating, oral care, agricoltura, gestione idrica, animal care e applicazioni tecniche.",
+      "Numero, stato, data, titolo ufficiale, titolo breve, descrizione prudente e opportunita di valorizzazione.",
     icon: Layers3
   },
   {
-    title: "Prodotti e piattaforme gia sviluppate",
+    title: "Valorizzazione riservata",
     description:
-      "MikroPaint, Sterilnova, Fotonika, Hydronica, Agro Soil / Mikro Soil e concept oral care.",
+      "Applicazioni specifiche, settori e sviluppi industriali vengono trattati nelle pagine dedicate o sotto NDA.",
     icon: Factory
   },
   {
@@ -254,11 +254,11 @@ export const pages: Record<string, PageContent> = {
   patents: {
     slug: "patents",
     eyebrow: "Brevetti e tecnologie",
-    title: "Brevetti approvati e piattaforme tecnologiche",
+    title: "Brevetti approvati e tecnologie proprietarie",
     description:
-      "Mikromed Europa valorizza un portafoglio di brevetti concessi e tecnologie funzionali applicabili a prodotti propri, licensing, white label e collaborazioni industriali.",
+      "Mikromed Europa valorizza un portafoglio di brevetti concessi e tecnologie funzionali. Ogni brevetto rappresenta una base tecnica che puo essere sviluppata, concessa in licenza o integrata in progetti industriali selezionati.",
     intro:
-      "La pagina distingue brevetti concessi, domande pubblicate e progetti in valutazione. I titoli ufficiali possono riportare wording brevettuale, ma le descrizioni commerciali restano prudenti.",
+      "In questa sezione sono riportate le informazioni essenziali dei brevetti. Le applicazioni specifiche, i settori di utilizzo e gli eventuali prodotti sviluppabili sono descritti nella sezione Applicazioni o approfonditi in fase di confronto diretto.",
     keywords: [
       "brevetti Mikromed",
       "tecnologie brevettate",
@@ -285,9 +285,9 @@ export const pages: Record<string, PageContent> = {
   technologies: {
     slug: "patents",
     eyebrow: "Brevetti e tecnologie",
-    title: "Brevetti approvati e piattaforme tecnologiche",
+    title: "Brevetti approvati e tecnologie proprietarie",
     description:
-      "Mikromed Europa valorizza brevetti concessi, domande pubblicate, piattaforme tecnologiche e prodotti collegati.",
+      "Mikromed Europa valorizza brevetti concessi, domande pubblicate e tecnologie funzionali con un approccio tecnico e istituzionale.",
     keywords: ["brevetti Mikromed", "tecnologie brevettate", "piattaforme tecnologiche"],
     sections: [
       { title: "Il portafoglio brevetti Mikromed", items: patentPortfolioCards },
@@ -301,7 +301,7 @@ export const pages: Record<string, PageContent> = {
     description:
       "Le tecnologie Mikromed possono essere adattate a diversi settori applicativi. Ogni applicazione richiede valutazione tecnica, test e posizionamento regolatorio specifico.",
     intro:
-      "Le macroaree collegano brevetti, domande in valutazione, prodotti e concept senza trasformare i titoli brevettuali in claim commerciali.",
+      "Questa pagina raccoglie settori possibili, scenari di utilizzo, mercati potenziali, categorie di partner, collegamento ai brevetti rilevanti e attenzione regolatoria.",
     keywords: ["superfici", "coating", "oral care", "agricoltura", "gestione idrica", "animal care"],
     sections: [{ title: "Campi applicativi", items: applications }]
   },

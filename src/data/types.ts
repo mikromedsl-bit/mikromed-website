@@ -78,6 +78,6 @@ export type PatentItem = {
 export type ApplicationArea = CardItem & {
   linkedPatents: string[];
   applicationExamples: string[];
-  linkedProducts: string[];
-  note?: string;
+  partnerTypes: string[];
+  regulatoryNote: string;
 };

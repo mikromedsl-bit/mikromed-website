@@ -3,142 +3,227 @@ import type { ApplicationArea } from "@/data/types";
 
 export const applications: ApplicationArea[] = [
   {
-    title: "Superfici, ambienti tecnici e facility",
+    title: "Superfici professionali e ambienti tecnici",
     description:
-      "Applicazioni professionali su superfici e ambienti tecnici, con claim e categoria da valutare in base al contesto d'uso.",
+      "Area applicativa per superfici, attrezzature, materiali trattati e contesti professionali che richiedono una valutazione tecnica e regolatoria dedicata.",
     icon: Factory,
-    linkedPatents: ["B01", "B03", "B05 solo per applicazioni locali/professionali da validare"],
+    linkedPatents: ["B01", "B03", "B05 da validare"],
     applicationExamples: [
-      "trattamento tecnico superfici",
       "superfici professionali",
-      "facility / cleaning B2B",
-      "superfici illuminabili con formula + luce",
-      "formulazioni locali da validare"
+      "ambienti tecnici",
+      "ambienti sanitari ad alto requisito igienico, con valutazione regolatoria dedicata",
+      "ambienti animali e zootecnici",
+      "attrezzature",
+      "materiali trattati",
+      "supporti tecnici",
+      "facility e cleaning professionale"
     ],
-    linkedProducts: [
-      "Sterilnova HH RTU",
-      "Sterilnova Concentrato",
-      "High Hygienic",
-      "Fotonika"
+    partnerTypes: [
+      "aziende facility",
+      "distributori professionali",
+      "produttori di prodotti tecnici per superfici",
+      "operatori B2B",
+      "partner industriali con rete commerciale"
     ],
-    note: "Non usare claim sanitari, biocidi o terapeutici nella comunicazione commerciale."
+    regulatoryNote:
+      "Il posizionamento dei claim e della categoria prodotto deve essere valutato in base all'uso previsto e al mercato di destinazione."
   },
   {
-    title: "Rivestimenti, vernici e coating",
+    title: "Rivestimenti, idropitture e coating",
     description:
-      "Uso della piattaforma rame/argento come base tecnica per additivi, matrici vernicianti e supporti trattati.",
+      "Area per integrazione di piattaforme tecniche in matrici vernicianti, rivestimenti e supporti trattati.",
     icon: Paintbrush,
     linkedPatents: ["B01"],
     applicationExamples: [
-      "additivo per pitture",
-      "incorporazione in matrice verniciante",
-      "coating tecnico su supporti",
-      "materiali trattati"
+      "additivi per idropitture",
+      "rivestimenti tecnici",
+      "coating funzionali",
+      "materiali trattati",
+      "integrazione in matrici vernicianti",
+      "superfici edilizie",
+      "ambienti professionali",
+      "superfici in contesti animali o industriali"
     ],
-    linkedProducts: ["MikroPaint Concentrato"]
+    partnerTypes: [
+      "produttori di pitture",
+      "produttori di coating",
+      "aziende edilizia tecnica",
+      "distributori professionali",
+      "partner B2B"
+    ],
+    regulatoryNote:
+      "L'integrazione in coating o pitture deve essere valutata in base alla funzione dichiarata, all'etichettatura e ai claim commerciali."
   },
   {
-    title: "Agricoltura, suolo e gestione idrica",
+    title: "Agricoltura, suolo e gestione fisica dell'acqua",
     description:
-      "Tecnologie per gestione fisica dell'acqua nel substrato, radici, trapianto, serre, vivai e trasporto piante.",
+      "Area dedicata alla gestione fisica dell'acqua in substrati, suolo, zona radicale e contesti agricoli da validare con test.",
     icon: Sprout,
-    linkedPatents: [
-      "B04",
-      "D03 come domanda in valutazione",
-      "B01 solo se collegato ad applicazioni da verificare"
-    ],
+    linkedPatents: ["B04", "D03 come domanda in valutazione"],
     applicationExamples: [
-      "gestione fisica dell'acqua nel substrato",
-      "rilascio progressivo dell'acqua",
-      "radici e trapianto",
+      "substrati",
+      "terricci",
       "florovivaismo",
-      "serre e vivai",
-      "trasporto piante"
+      "trapianto",
+      "zona radicale",
+      "gestione fisica dell'acqua",
+      "serre",
+      "vivai",
+      "colture in vaso",
+      "trasporto piante",
+      "riduzione stress idrico da verificare con test",
+      "premiscele agricole"
     ],
-    linkedProducts: [
-      "Agro Soil / Mikro Soil",
-      "Mikro Earth",
-      "Hydronica Root",
-      "Hydronica Foliar, collegamento da verificare"
-    ]
+    partnerTypes: [
+      "distributori agricoli",
+      "vivai",
+      "serre",
+      "produttori di substrati",
+      "agronomi",
+      "aziende agritech",
+      "brand agricoli"
+    ],
+    regulatoryNote:
+      "I claim agronomici devono essere supportati da test e valutati in base alla categoria prodotto applicabile."
   },
   {
-    title: "Oral care, odontoiatria e biofilm",
+    title: "Oral care, odontoiatria e applicazioni locali",
     description:
-      "Ambiti dental e oral care da sviluppare con particolare attenzione a safety, claim e categoria regolatoria.",
+      "Area per formulazioni locali, dental care e oral care da sviluppare con partner specializzati e adeguata validazione.",
     icon: Beaker,
     linkedPatents: ["B02", "B05", "D02 come domanda in valutazione"],
     applicationExamples: [
-      "delivery system dentinale",
-      "gel o trattamento professionale",
-      "dentifricio o prodotto orale",
-      "collutorio tecnico",
-      "gel orale",
-      "licensing dental/oral care"
+      "dental care professionale",
+      "oral care consumer",
+      "formulazioni locali",
+      "gel",
+      "dentifrici",
+      "collutori tecnici",
+      "prodotti da sviluppare con partner specializzati",
+      "applicazioni locali da validare"
     ],
-    linkedProducts: [
-      "Gel dentinale professionale",
-      "Dentifricio desensibilizzante white label",
-      "Gel orale anti-biofilm",
-      "Collutorio tecnico"
+    partnerTypes: [
+      "aziende oral care",
+      "brand dentali",
+      "produttori conto terzi",
+      "laboratori specializzati",
+      "reti professionali odontoiatriche",
+      "partner con competenze regolatorie"
     ],
-    note: "Le applicazioni oral care non devono essere presentate come prodotti medicali pronti."
+    regulatoryNote:
+      "Le applicazioni in ambito orale richiedono particolare attenzione a safety, destinazione d'uso, categoria prodotto e claim."
   },
   {
-    title: "Acqua, odori e sistemi fotoattivabili",
+    title: "Acqua, serbatoi e sistemi fotoattivabili",
     description:
-      "Sistemi formula + luce per applicazioni tecniche in acqua, liquidi, serbatoi, superfici illuminabili e gestione tecnica degli odori.",
+      "Area tecnica per sistemi formula + luce, liquidi tecnici, serbatoi e integrazione con dispositivi o protocolli industriali.",
     icon: SunMedium,
     linkedPatents: ["B03"],
     applicationExamples: [
-      "trattamento tecnico acqua/liquidi",
+      "acqua e liquidi tecnici",
       "serbatoi",
-      "gestione tecnica odori",
-      "formula + attivazione luminosa",
-      "sistema formula + device"
+      "sistemi formula + luce",
+      "superfici illuminabili",
+      "ambienti chiusi",
+      "gestione tecnica di ristagni e odori",
+      "integrazione con dispositivi LED",
+      "protocolli applicativi industriali"
     ],
-    linkedProducts: ["Fotonika", "Kit Fotonika LED"]
+    partnerTypes: [
+      "aziende trattamento acqua",
+      "produttori di dispositivi",
+      "aziende facility",
+      "distributori B2B",
+      "partner industriali",
+      "produttori di sistemi tecnici"
+    ],
+    regulatoryNote:
+      "Ogni utilizzo deve essere valutato in base a protocollo, esposizione luminosa, destinazione d'uso e comunicazione commerciale."
   },
   {
-    title: "Animal care e zootecnia",
+    title: "Animal care, ambienti animali e zootecnia",
     description:
-      "Applicazioni su superfici di ambienti animali e concept separati per gestione fisica di umidita e odori.",
+      "Area per ambienti animali, superfici tecniche e soluzioni fisiche su umidita, odori e supporti da validare.",
     icon: PawPrint,
-    linkedPatents: [
-      "B01 per superfici ambienti animali",
-      "B05 solo per oral care animale da validare",
-      "concept non ancora collegati ai brevetti"
-    ],
+    linkedPatents: ["B01", "B04", "B05 solo se validato"],
     applicationExamples: [
-      "superfici di ambienti zootecnici",
-      "attrezzature e ambienti tecnici",
-      "oral care animale da validare",
-      "lettiere e gestione fisica umidita/odori"
+      "superfici di ambienti animali",
+      "box",
+      "attrezzature",
+      "lettiere e gestione fisica dell'umidita",
+      "controllo fisico degli odori",
+      "substrati tecnici",
+      "ambienti zootecnici",
+      "oral care animale solo come applicazione da validare"
     ],
-    linkedProducts: ["Tecnologie per lettiere animali", "Concept separati da valutare"],
-    note: "Non fare claim veterinari, terapeutici o biocidi."
+    partnerTypes: [
+      "aziende animal care",
+      "produttori di lettiere",
+      "aziende zootecniche",
+      "distributori veterinari/professionali",
+      "allevamenti",
+      "partner B2B"
+    ],
+    regulatoryNote:
+      "Non devono essere utilizzati claim veterinari, terapeutici o biocidi senza adeguato percorso tecnico e regolatorio."
   },
   {
-    title: "Progetti su misura",
+    title: "Tessili, filtri e materiali trattati",
     description:
-      "Percorsi dedicati per partner che portano mercato, canale, brand o necessita tecnica e richiedono adattamento formulativo.",
-    icon: Leaf,
-    linkedPatents: ["Accesso al portafoglio sotto NDA se necessario"],
+      "Area per supporti tecnici, materiali porosi, membrane, tessili e filtri con funzione dichiarata da valutare caso per caso.",
+    icon: Droplets,
+    linkedPatents: ["B01", "B03 se applicabile"],
     applicationExamples: [
-      "sviluppo prodotto",
-      "claim strategy",
-      "documentazione tecnica",
-      "co-sviluppo industriale",
-      "licensing e white label"
+      "supporti tessili",
+      "filtri",
+      "materiali porosi",
+      "membrane",
+      "supporti tecnici",
+      "materiali per ambienti professionali",
+      "integrazione in coating o trattamenti superficiali"
     ],
-    linkedProducts: ["Da definire in base al progetto"],
-    note: "Le informazioni tecniche dettagliate vengono condivise dentro un percorso strutturato."
+    partnerTypes: [
+      "produttori di materiali tecnici",
+      "aziende tessili B2B",
+      "produttori di filtri",
+      "aziende industriali",
+      "partner R&D"
+    ],
+    regulatoryNote:
+      "Il trattamento di materiali e supporti deve essere valutato in base alla funzione dichiarata e al quadro regolatorio applicabile."
+  },
+  {
+    title: "Progetti industriali su misura",
+    description:
+      "Area per adattare tecnologie, know-how e piattaforme a mercati, partner o percorsi industriali specifici.",
+    icon: Leaf,
+    linkedPatents: ["B01", "B03", "B04", "B05 secondo valutazione"],
+    applicationExamples: [
+      "sviluppo di nuova formulazione",
+      "adattamento a un mercato specifico",
+      "licensing tecnologico",
+      "white label",
+      "co-sviluppo",
+      "prove tecniche",
+      "integrazione in prodotti esistenti",
+      "costruzione di nuova proprieta intellettuale"
+    ],
+    partnerTypes: [
+      "aziende industriali",
+      "startup tecniche",
+      "distributori con mercato",
+      "laboratori R&D",
+      "produttori conto terzi",
+      "brand owner"
+    ],
+    regulatoryNote:
+      "Le informazioni tecniche dettagliate vengono condivise sotto NDA o all'interno di un percorso di collaborazione strutturato."
   }
 ];
 
 export const applicationHighlights = [
   {
-    title: "Gestione idrica",
+    title: "Gestione fisica dell'acqua",
     description: "Suolo, substrati, radici, serre e vivai.",
     icon: Droplets
   },

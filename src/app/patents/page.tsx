@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function PatentsPage() {
-  const [portfolio, , , fields] = page.sections;
+  const [portfolio] = page.sections;
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function PatentsPage() {
 
       <Section
         title="Brevetti concessi"
-        description="Brevetti approvati da presentare come piattaforme tecnologiche applicabili a prodotti propri, licensing, white label e collaborazioni industriali."
+        description="Brevetti approvati presentati in modo tecnico e istituzionale, senza includere aree di utilizzo o nomi di prodotti nelle schede."
         tone="muted"
       >
         <div className="space-y-6">
@@ -66,16 +66,8 @@ export default function PatentsPage() {
         </div>
       </Section>
 
-      <Section
-        title={fields.title}
-        description="Campi tecnologici e applicativi derivati dai brevetti, dalle domande pubblicate e dai documenti prodotto collegati."
-        tone="muted"
-      >
-        <CardGrid items={fields.items} />
-      </Section>
-
       <CTASection
-        description="Possiamo valutare applicazioni possibili, accesso tecnico sotto NDA, licensing o co-sviluppo industriale."
+        description="Possiamo valutare accesso tecnico sotto NDA, licensing o co-sviluppo industriale partendo dalle informazioni essenziali del portafoglio."
         href="/collaborate"
         label="Collabora con noi"
         title="Vuoi approfondire una tecnologia Mikromed?"

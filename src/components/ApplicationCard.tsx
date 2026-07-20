@@ -1,4 +1,5 @@
 import { Badge } from "@/components/Badge";
+import { ButtonLink } from "@/components/ButtonLink";
 import type { ApplicationArea } from "@/data/types";
 
 export function ApplicationCard({ item }: { item: ApplicationArea }) {
@@ -29,7 +30,7 @@ export function ApplicationCard({ item }: { item: ApplicationArea }) {
       <div className="mt-5 grid gap-5 md:grid-cols-2">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mineral-500">
-            Applicazioni
+            Possibili utilizzi
           </p>
           <ul className="mt-3 space-y-2 text-sm leading-6 text-mineral-700">
             {item.applicationExamples.map((application) => (
@@ -39,21 +40,24 @@ export function ApplicationCard({ item }: { item: ApplicationArea }) {
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mineral-500">
-            Prodotti collegati
+            Partner potenzialmente interessati
           </p>
           <ul className="mt-3 space-y-2 text-sm leading-6 text-mineral-700">
-            {item.linkedProducts.map((product) => (
-              <li key={product}>{product}</li>
+            {item.partnerTypes.map((partner) => (
+              <li key={partner}>{partner}</li>
             ))}
           </ul>
         </div>
       </div>
 
-      {item.note ? (
-        <p className="mt-5 border-t border-mineral-200 pt-4 text-sm leading-6 text-mineral-600">
-          {item.note}
+      <div className="mt-5 flex flex-col gap-4 border-t border-mineral-200 pt-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="max-w-3xl text-sm leading-6 text-mineral-600">
+          {item.regulatoryNote}
         </p>
-      ) : null}
+        <ButtonLink href="/contact" variant="secondary">
+          Valuta questa applicazione
+        </ButtonLink>
+      </div>
     </article>
   );
 }

@@ -54,10 +54,10 @@ export const patents: PatentItem[] = [
     opportunities: [
       "licensing tecnologico",
       "white label",
-      "distribuzione B2B",
-      "collaborazione con produttori coating",
-      "facility e cleaning professionale",
-      "sviluppo prodotti su superfici"
+      "co-sviluppo industriale",
+      "integrazione in prodotti esistenti",
+      "partnership B2B",
+      "valutazione tecnica sotto NDA"
     ],
     publicNote:
       "Non dichiarare contratti firmati o mercato attivo se non verificato. Usare documentazione tecnica disponibile, prodotto definito, in sviluppo o disponibile per confronto.",
@@ -82,7 +82,7 @@ export const patents: PatentItem[] = [
     status: "Concesso",
     territories: "Italia",
     summary:
-      "Tecnologia di formulazione e rilascio locale destinata all'ambito dentale e oral care, con potenziale applicazione in prodotti professionali o consumer. Eventuali claim e categoria regolatoria devono essere valutati caso per caso.",
+      "Tecnologia di formulazione e rilascio locale destinata all'ambito dentale/orale, con potenziale sviluppo in prodotti professionali o consumer dental care. Eventuali claim, classificazione e categoria regolatoria devono essere valutati caso per caso.",
     sectors: [
       "Odontoiatria",
       "Oral care",
@@ -102,9 +102,10 @@ export const patents: PatentItem[] = [
     ],
     opportunities: [
       "licensing tecnologico",
+      "sviluppo con partner dental",
       "white label oral care",
-      "sviluppo prodotto con brand dental",
-      "validazione tecnica e regolatoria"
+      "validazione tecnica e regolatoria",
+      "progetto B2B con aziende del settore"
     ],
     publicNote:
       "Non presentare come prodotto medicale gia pronto. Usare tecnologia concedibile in licenza, progetto da sviluppare o applicazione da validare.",
@@ -116,9 +117,9 @@ export const patents: PatentItem[] = [
   },
   {
     internalId: "B03",
-    title: "Composizione fotoattivabile / tecnologia Fotonika",
+    title: "Composizione fotoattivabile",
     officialTitle: "COMPOSIZIONE DISINFETTANTE IGIENIZZANTE AD ATTIVAZIONE FOTODINAMICA",
-    shortTitle: "Composizione fotoattivabile / tecnologia Fotonika",
+    shortTitle: "Composizione fotoattivabile",
     applicationNumber: "102023000019734",
     publicationOrGrant: "IT202300019734A1",
     holder: "Cinti Silvia 40%; Tomei Leonardo 40%; Inderst Luigi Rosario Franco 20%",
@@ -147,11 +148,12 @@ export const patents: PatentItem[] = [
     ],
     linkedProducts: ["Fotonika", "Kit Fotonika LED"],
     opportunities: [
-      "licenza tecnologia",
-      "partnership industriale",
+      "licenza tecnologica",
       "sviluppo sistema formula + dispositivo",
-      "progetto B2B prioritario",
-      "test operativi e protocollo luce"
+      "co-sviluppo con partner industriale",
+      "test operativi",
+      "protocollo tecnico sotto NDA",
+      "partnership B2B"
     ],
     publicNote:
       "Non usare claim commerciali biocidi. Parlare di attivazione luminosa, tecnologia fotoattivabile, sistema tecnico e applicazione da validare.",
@@ -176,7 +178,7 @@ export const patents: PatentItem[] = [
     status: "Concesso",
     territories: "Italia",
     summary:
-      "Tecnologia idroritentiva per trattenere e rilasciare acqua nel substrato, con applicazioni potenziali in agricoltura, florovivaismo, trapianto, gestione radicale e trasporto vivaistico. I claim agricoli devono essere valutati in funzione della categoria prodotto.",
+      "Tecnologia idroritentiva orientata alla gestione fisica dell'acqua in substrati, suolo e zona radicale. Le possibili applicazioni agricole devono essere sviluppate con attenzione a test, modalita d'uso, categoria prodotto e claim ammessi.",
     sectors: [
       "Agricoltura",
       "Suolo",
@@ -204,10 +206,10 @@ export const patents: PatentItem[] = [
     opportunities: [
       "licensing tecnologico",
       "distribuzione agraria",
-      "B2B agricolo",
       "white label",
-      "partnership con vivai, serre, agronomi e distributori agricoli",
-      "test agronomici e fitotossicita"
+      "test agronomici",
+      "co-sviluppo con partner agricoli",
+      "partnership con vivai, serre e distributori"
     ],
     publicNote:
       "Non dichiarare accordi o esclusive non verificati. Hydronica Foliar resta piattaforma agricola separata con collegamento brevettuale da verificare.",
@@ -219,9 +221,9 @@ export const patents: PatentItem[] = [
   },
   {
     internalId: "B05",
-    title: "Composizione per biofilm e ambito orale/professionale",
+    title: "Composizione per biofilm e applicazioni locali",
     officialTitle: "COMPOSIZIONE DISINFETTANTE IGIENIZZANTE",
-    shortTitle: "Composizione per biofilm e ambito orale/professionale",
+    shortTitle: "Composizione per biofilm e applicazioni locali",
     applicationNumber: "102023000020343",
     publicationOrGrant: "IT202300020343A1",
     holder: "Dato pubblico da verificare nei documenti ufficiali",
@@ -231,7 +233,7 @@ export const patents: PatentItem[] = [
     status: "Concesso",
     territories: "Italia",
     summary:
-      "Tecnologia formulativa con interesse per ambiti orali, biofilm, mucose, derma o applicazioni locali. Le applicazioni devono essere sviluppate con particolare attenzione a safety, claim e classificazione regolatoria.",
+      "Tecnologia formulativa con interesse per applicazioni locali, oral care, biofilm e ambiti professionali da validare. Lo sviluppo commerciale richiede particolare attenzione a safety, claim, destinazione d'uso e classificazione regolatoria.",
     sectors: [
       "Igiene orale",
       "Oral care",
@@ -251,9 +253,10 @@ export const patents: PatentItem[] = [
     opportunities: [
       "licensing tecnologico",
       "white label oral care",
-      "prodotto B2B prioritario",
-      "collaborazione con brand oral care",
-      "test safety mucose, efficacia e stabilita"
+      "collaborazione con brand specializzati",
+      "sviluppo B2B",
+      "validazione safety e regolatoria",
+      "progetto sotto NDA"
     ],
     publicNote:
       "Non usare claim medicali o biocidi. Parlare di formulazione locale, applicazione da validare e posizionamento regolatorio da definire.",
