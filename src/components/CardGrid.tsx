@@ -2,12 +2,13 @@ import type { CardItem } from "@/data/types";
 
 type CardGridProps = {
   items: CardItem[];
-  columns?: "three" | "four" | "five";
+  columns?: "two" | "three" | "four" | "five";
   dark?: boolean;
 };
 
 export function CardGrid({ items, columns = "three", dark = false }: CardGridProps) {
   const grid = {
+    two: "md:grid-cols-2",
     three: "lg:grid-cols-3",
     four: "lg:grid-cols-4",
     five: "lg:grid-cols-5"

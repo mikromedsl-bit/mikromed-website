@@ -1,7 +1,6 @@
 import {
   BadgeCheck,
   Beaker,
-  ClipboardCheck,
   Factory,
   FileLock2,
   Handshake,
@@ -31,77 +30,28 @@ export const siteConfig = {
 
 export const heroServiceCards: (CardItem & { href: string; label: string })[] = [
   {
-    title: "Brevetti Mikromed",
+    title: "Consulenza regolatoria",
     description:
-      "5 brevetti concessi e 3 domande pubblicate/in valutazione, con applicazioni in piu mercati regolati.",
+      "Claim, etichette, classificazione prodotto, documentazione tecnica e posizionamento.",
+    href: "/regulatory-claims",
+    label: "Richiedi consulenza",
+    icon: ShieldCheck
+  },
+  {
+    title: "Tecnologie brevettate",
+    description:
+      "Brevetti concessi, piattaforme funzionali e applicazioni sviluppabili con partner selezionati.",
     href: "/patents",
-    label: "Brevetti e tecnologie",
+    label: "Esplora le tecnologie",
     icon: FileLock2
   },
   {
-    title: "Applicazioni industriali",
+    title: "Prodotti e formulazioni proprietarie",
     description:
-      "Le tecnologie Mikromed possono essere valutate in diversi settori applicativi, con attenzione a funzione tecnica, test e posizionamento regolatorio.",
-    href: "/applications",
-    label: "Esplora le applicazioni",
-    icon: Layers3
-  },
-  {
-    title: "Collaborazioni industriali",
-    description:
-      "Licensing, white label, distribuzione, co-sviluppo, consulenza regolatoria e supporto tecnico alla scrittura brevettuale.",
-    href: "/collaborate",
-    label: "Collabora con noi",
-    icon: Handshake
-  }
-];
-
-export const statBlocks: CardItem[] = [
-  {
-    title: "5 brevetti concessi",
-    description: "Brevetti approvati da valorizzare come piattaforme tecnologiche e basi prodotto.",
-    icon: BadgeCheck
-  },
-  {
-    title: "3 domande pubblicate / in valutazione",
-    description: "Domande da distinguere dai brevetti concessi e da comunicare con stato prudente.",
-    icon: FileLock2
-  },
-  {
-    title: "Applicazioni dei brevetti",
-    description: "Settori applicativi e scenari tecnici organizzati brevetto per brevetto.",
-    icon: Layers3
-  },
-  {
-    title: "Strategia regolatoria e claim",
-    description: "Posizionamento, etichette, claim strategy e documentazione tecnica.",
-    icon: ClipboardCheck
-  },
-  {
-    title: "Collaborazioni industriali",
-    description: "Licensing, white label, distribuzione B2B, co-sviluppo e supporto sotto NDA.",
-    icon: Handshake
-  }
-];
-
-export const whatMikromedDoes: CardItem[] = [
-  {
-    title: "Sviluppiamo brevetti e tecnologie proprie",
-    description:
-      "Mikromed sviluppa tecnologie funzionali e formulazioni protette da brevetto, con applicazioni in mercati regolati.",
-    icon: FileLock2
-  },
-  {
-    title: "Valutiamo applicazioni industriali",
-    description:
-      "Analizziamo settori, funzioni tecniche, test e posizionamento regolatorio per valorizzare le tecnologie brevettate.",
-    icon: Layers3
-  },
-  {
-    title: "Collaboriamo con aziende e partner",
-    description:
-      "Valutiamo licensing, white label, distribuzione, co-sviluppo, consulenza regolatoria e supporto tecnico brevettuale.",
-    icon: Factory
+      "Soluzioni sviluppate da Mikromed sulla base di tecnologie, formulazioni e know-how interni.",
+    href: "/product-development",
+    label: "Sviluppo prodotto",
+    icon: Beaker
   }
 ];
 
@@ -110,7 +60,7 @@ export const collaborateCards: (CardItem & { href: string; label: string })[] = 
     title: "Licensing e accesso a tecnologie brevettate",
     description:
       "Accesso a piattaforme Mikromed con valutazione tecnica, regolatoria e commerciale sotto NDA quando necessario.",
-    href: "/create-your-product",
+    href: "/collaborate",
     label: "Accedi a una tecnologia",
     icon: FileLock2
   },
@@ -187,39 +137,6 @@ export const patentPortfolioCards: CardItem[] = [
   }
 ];
 
-export const technologyFields: CardItem[] = [
-  {
-    title: "Superfici e coating",
-    description: "Piattaforme per superfici professionali, vernici, matrici e supporti trattati.",
-    icon: Layers3
-  },
-  {
-    title: "Agricoltura e gestione idrica",
-    description: "Tecnologie idroritentive per suolo, substrati, radici, serre e vivai.",
-    icon: Factory
-  },
-  {
-    title: "Oral care e dental",
-    description: "Delivery system dentinale e concept oral care da validare tecnicamente e regolatoriamente.",
-    icon: PenTool
-  },
-  {
-    title: "Acqua, odori e fotoattivazione",
-    description: "Sistemi formula + luce per applicazioni tecniche e gestione fisica di contesti specifici.",
-    icon: Beaker
-  },
-  {
-    title: "Animal care e ambienti tecnici",
-    description: "Applicazioni su superfici di ambienti animali e concept separati da valutare.",
-    icon: ShieldCheck
-  },
-  {
-    title: "Progetti su misura",
-    description: "Adattamento formulativo, documentazione tecnica, claim strategy e partnership sotto NDA.",
-    icon: ClipboardCheck
-  }
-];
-
 export const patentSupportCards: CardItem[] = [
   {
     title: "Portafoglio brevetti Mikromed",
@@ -233,16 +150,6 @@ export const patentSupportCards: CardItem[] = [
       "Supporto tecnico alla documentazione e coordinamento con consulenti qualificati per gli aspetti formali.",
     icon: ShieldCheck
   }
-];
-
-export const processSteps = [
-  "Primo confronto",
-  "NDA se necessario",
-  "Valutazione tecnica",
-  "Percorso formulativo / regolatorio / brevettuale",
-  "Proposta progetto",
-  "Sviluppo",
-  "Lancio o supporto al deposito"
 ];
 
 export const pages: Record<string, PageContent> = {
@@ -262,12 +169,7 @@ export const pages: Record<string, PageContent> = {
       "rame e argento",
       "chabasite"
     ],
-    sections: [
-      { title: "Il portafoglio brevetti Mikromed", items: patentPortfolioCards },
-      { title: "Brevetti concessi", items: [] },
-      { title: "Domande pubblicate e progetti in valutazione", items: [] },
-      { title: "Campi tecnologici", items: technologyFields }
-    ],
+    sections: [{ title: "Il portafoglio brevetti Mikromed", items: patentPortfolioCards }],
     cta: {
       title: "Vuoi approfondire una tecnologia Mikromed?",
       description:
@@ -275,18 +177,6 @@ export const pages: Record<string, PageContent> = {
       href: "/collaborate",
       label: "Collabora con noi"
     }
-  },
-  technologies: {
-    slug: "patents",
-    eyebrow: "Brevetti e tecnologie",
-    title: "Brevetti approvati e tecnologie proprietarie",
-    description:
-      "Mikromed Europa valorizza brevetti concessi, domande pubblicate e tecnologie funzionali con un approccio tecnico e istituzionale.",
-    keywords: ["brevetti Mikromed", "tecnologie brevettate", "piattaforme tecnologiche"],
-    sections: [
-      { title: "Il portafoglio brevetti Mikromed", items: patentPortfolioCards },
-      { title: "Campi tecnologici", items: technologyFields }
-    ]
   },
   applications: {
     slug: "applications",
@@ -351,24 +241,6 @@ export const pages: Record<string, PageContent> = {
         "Raccontaci prodotto, territorio, applicazione o idea tecnica: valuteremo il percorso piu adatto.",
       href: "/contact",
       label: "Contatta Mikromed"
-    }
-  },
-  "create-your-product": {
-    slug: "create-your-product",
-    eyebrow: "Collaborazione prodotto",
-    title: "Crea un prodotto con le tecnologie Mikromed",
-    description:
-      "Quando un partner conosce il proprio mercato ma ha bisogno di una tecnologia protetta, di una formulazione funzionale o di un percorso regolatorio coerente, Mikromed puo intervenire come partner tecnico e strategico.",
-    intro:
-      "La creazione di prodotti con partner viene valutata caso per caso, partendo dal portafoglio tecnico Mikromed o da un bisogno applicativo specifico.",
-    keywords: ["sviluppo prodotto", "tecnologie Mikromed", "licenza tecnologica"],
-    sections: [{ title: "Percorso di collaborazione", items: buildWithPatents }],
-    cta: {
-      title: "Vuoi valutare un nuovo prodotto o territorio?",
-      description:
-        "Porta mercato, brand, canale o applicazione: Mikromed puo valutare tecnologia, posizionamento e modello di collaborazione.",
-      href: "/contact",
-      label: "Avvia una collaborazione"
     }
   },
   "regulatory-claims": {

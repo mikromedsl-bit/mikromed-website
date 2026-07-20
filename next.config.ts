@@ -15,8 +15,33 @@ const nextConfig: NextConfig = {
         permanent: true
       },
       {
+        source: "/opportunities",
+        destination: "/applications",
+        permanent: true
+      },
+      {
+        source: "/opportunita",
+        destination: "/applications",
+        permanent: true
+      },
+      {
+        source: "/products-projects",
+        destination: "/applications",
+        permanent: true
+      },
+      {
         source: "/products-opportunities",
         destination: "/applications",
+        permanent: true
+      },
+      {
+        source: "/create-your-product",
+        destination: "/collaborate",
+        permanent: true
+      },
+      {
+        source: "/technologies",
+        destination: "/patents",
         permanent: true
       }
     ];

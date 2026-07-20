@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CardGrid } from "@/components/CardGrid";
 import { CTASection } from "@/components/CTASection";
@@ -7,11 +6,7 @@ import { Section } from "@/components/Section";
 import { serviceOverviewCards } from "@/data/services";
 import {
   buildWithPatents,
-  collaborateCards,
-  heroServiceCards,
-  statBlocks,
-  technologyFields,
-  whatMikromedDoes
+  heroServiceCards
 } from "@/data/site";
 
 export default function Home() {
@@ -27,21 +22,17 @@ export default function Home() {
               Mikromed Europa S.L.
             </p>
             <h1 className="mt-6 max-w-4xl text-[2.55rem] font-semibold leading-[1.04] tracking-normal text-forest-900 text-balance sm:text-5xl lg:text-[3.65rem]">
-              Brevetti, applicazioni e collaborazioni per mercati regolati.
+              Consulenza regolatoria. Tecnologie brevettate. Prodotti e formulazioni proprietarie.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-mineral-700">
-              Mikromed Europa sviluppa e valorizza tecnologie brevettate,
-              piattaforme funzionali e know-how regolatorio per applicazioni in
-              superfici, coating, oral care, agricoltura, gestione idrica,
-              animal care e progetti industriali.
-            </p>
-            <p className="mt-4 text-base font-semibold text-forest-800">
-              Brevetti approvati, applicazioni industriali e collaborazioni per mercati regolati.
+              Mikromed Europa integra competenza regolatoria, brevetti concessi e know-how
+              formulativo per sviluppare prodotti, formulazioni e soluzioni tecniche applicabili
+              a mercati industriali e regolati.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ButtonLink href="/patents">Scopri i brevetti</ButtonLink>
-              <ButtonLink href="/applications" variant="secondary">
-                Esplora le applicazioni
+              <ButtonLink href="/regulatory-claims">Richiedi consulenza</ButtonLink>
+              <ButtonLink href="/patents" variant="secondary">
+                Esplora le tecnologie
               </ButtonLink>
               <ButtonLink href="/collaborate" variant="secondary">
                 Collabora con noi
@@ -65,65 +56,39 @@ export default function Home() {
         </div>
       </section>
 
-      <Section
-        eyebrow="Mappa Mikromed"
-        title="Proprieta intellettuale, applicazioni e collaborazione industriale"
-        description="Mikromed e una societa tecnologica europea con brevetti propri, competenze applicative e capacita di collaborazione industriale."
-      >
-        <div className="grid gap-5 lg:grid-cols-3">
-          {heroServiceCards.map((card) => {
-            const Icon = card.icon;
-            return (
-              <article className="premium-card rounded-lg p-6" key={card.title}>
-                {Icon ? (
-                  <span className="premium-icon mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg text-forest-900">
-                    <Icon aria-hidden="true" className="h-5 w-5" />
-                  </span>
-                ) : null}
-                <h3 className="text-xl font-semibold text-forest-900">{card.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-mineral-700">{card.description}</p>
-                <Link className="mt-5 inline-flex text-sm font-semibold text-forest-900 hover:text-mineral-700" href={card.href}>
-                  {card.label}
-                </Link>
-              </article>
-            );
-          })}
+      <section className="bg-white text-mineral-900">
+        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
+          <CardGrid items={heroServiceCards} />
         </div>
-      </Section>
-
-      <Section
-        eyebrow="Credibilita"
-        title="Numeri e asset da valorizzare"
-        description="Il portafoglio brevettuale Mikromed e la base tecnologica delle applicazioni industriali e delle collaborazioni con partner selezionati."
-        tone="dark"
-      >
-        <CardGrid items={statBlocks} columns="five" dark />
-      </Section>
+      </section>
 
       <Section
         eyebrow="Dal brevetto all'applicazione"
         title="Una piattaforma, piu percorsi applicativi"
         description="Ogni brevetto Mikromed viene analizzato come piattaforma applicativa: cosa protegge, quali settori puo raggiungere e quali percorsi tecnici possono essere valutati con partner selezionati."
       >
-        <CardGrid items={buildWithPatents} columns="four" />
+        <CardGrid items={buildWithPatents} columns="two" />
       </Section>
 
       <Section
-        eyebrow="Le aree principali"
-        title="Dove applicare le tecnologie Mikromed"
-        description="Le aree applicative vengono sempre trattate con valutazione tecnica, test e posizionamento regolatorio specifico."
+        eyebrow="Brevetti e tecnologie"
+        title="Brevetti e tecnologie"
+        description="Una panoramica essenziale del portafoglio Mikromed, con brevetti concessi e domande pubblicate presentati senza confondere gli stati."
         tone="muted"
       >
-        <CardGrid items={technologyFields} />
+        <ButtonLink href="/patents" variant="secondary">
+          Vai ai brevetti
+        </ButtonLink>
       </Section>
 
       <Section
-        eyebrow="Cosa fa Mikromed"
-        title="Tecnologie proprie, applicazioni e servizi collegati"
-        description="Il posizionamento Mikromed nasce dall'integrazione tra proprieta intellettuale, sviluppo di piattaforme e lavoro con partner selezionati."
-        tone="muted"
+        eyebrow="Applicazioni"
+        title="Applicazioni"
+        description="Le applicazioni sono organizzate per brevetto, con settori possibili, scenari sviluppabili, partner potenzialmente interessati e note regolatorie."
       >
-        <CardGrid items={whatMikromedDoes} />
+        <ButtonLink href="/applications" variant="secondary">
+          Esplora le applicazioni
+        </ButtonLink>
       </Section>
 
       <Section
@@ -134,37 +99,11 @@ export default function Home() {
         <CardGrid items={serviceOverviewCards} />
       </Section>
 
-      <Section
-        eyebrow="Collaborazioni"
-        title="Collabora con Mikromed"
-        description="Se hai un mercato, un canale distributivo o un'esigenza tecnica, Mikromed puo valutare l'accesso a tecnologie brevettate, applicazioni industriali, sviluppo su misura, licensing o collaborazione regolatoria."
-      >
-        <div className="grid gap-5 lg:grid-cols-3">
-          {collaborateCards.map((card) => {
-            const Icon = card.icon;
-            return (
-              <article className="premium-card rounded-lg p-6" key={card.title}>
-                {Icon ? (
-                  <span className="premium-icon mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg text-forest-900">
-                    <Icon aria-hidden="true" className="h-5 w-5" />
-                  </span>
-                ) : null}
-                <h3 className="text-xl font-semibold text-forest-900">{card.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-mineral-700">{card.description}</p>
-                <Link className="mt-5 inline-flex text-sm font-semibold text-forest-900 hover:text-mineral-700" href={card.href}>
-                  {card.label}
-                </Link>
-              </article>
-            );
-          })}
-        </div>
-      </Section>
-
       <CTASection
-        description="Che tu voglia conoscere una tecnologia, valutare un'applicazione o proporre una collaborazione, possiamo costruire un percorso tecnico e regolatorio coerente."
+        description="Che si tratti di una consulenza regolatoria, di una tecnologia brevettata o dello sviluppo di una formulazione, Mikromed puo valutare il percorso piu adatto."
         href="/contact"
-        label="Contatta Mikromed"
-        title="Brevetto, applicazione o collaborazione?"
+        label="Contattaci"
+        title="Raccontaci il tuo progetto."
       />
     </>
   );
