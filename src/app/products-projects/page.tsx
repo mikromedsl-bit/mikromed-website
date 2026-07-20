@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { ProductGrid } from "@/components/ProductGrid";
+import { ProductStatusLegend } from "@/components/ProductStatusLegend";
 import { Section } from "@/components/Section";
 import { productGroups } from "@/data/products";
 import { pages } from "@/data/site";
@@ -37,7 +38,9 @@ export default function ProductsProjectsPage() {
       <Section
         title="Panoramica"
         description={page.intro}
-      />
+      >
+        <ProductStatusLegend />
+      </Section>
 
       {productGroups.map((group, index) => (
         <Section
@@ -62,7 +65,7 @@ export default function ProductsProjectsPage() {
 
       <Section
         title="Nota sulle opportunita"
-        description="Le soluzioni presentate sono formulate come aree di sviluppo, piattaforme tecniche o concept applicativi. La disponibilita commerciale, eventuali esclusive territoriali, modelli di licenza e modalita di partnership vengono valutati caso per caso. I nomi commerciali, i partner esistenti e gli accordi riservati non vengono divulgati pubblicamente."
+        description="Gli stati indicati hanno finalita orientativa. La disponibilita commerciale, eventuali esclusive territoriali, modelli di licenza, white label, distribuzione o co-sviluppo vengono valutati caso per caso. I partner esistenti, i mercati gia coperti e gli accordi riservati non vengono divulgati pubblicamente."
         tone="muted"
       />
     </>

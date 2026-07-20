@@ -309,9 +309,9 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "Prodotti e opportunita",
     title: "Soluzioni, piattaforme e opportunita di sviluppo",
     description:
-      "Mikromed sviluppa formulazioni, piattaforme tecniche e concept applicativi basati sul proprio know-how. Alcune soluzioni possono essere sviluppate, adattate, concesse in licenza o valorizzate attraverso partnership selezionate.",
+      "Mikromed sviluppa formulazioni, piattaforme tecniche e concept applicativi basati sul proprio know-how. Alcune soluzioni sono gia attive in mercati selezionati, mentre altre sono disponibili per licensing, white label, distribuzione o co-sviluppo.",
     intro:
-      "In questa sezione non vengono esposti nomi commerciali o accordi riservati. Le opportunita sono presentate per area applicativa e tipologia di soluzione, cosi da permettere a partner industriali, distributori e brand owner di valutare possibili percorsi di sviluppo.",
+      "I colori e gli stati indicano il livello di disponibilita commerciale o progettuale. Le informazioni dettagliate su territori, esclusivita e modelli di partnership vengono condivise solo in fase di confronto diretto o sotto NDA.",
     keywords: [
       "soluzioni Mikromed",
       "piattaforme tecniche",

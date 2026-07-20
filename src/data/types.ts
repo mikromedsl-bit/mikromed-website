@@ -37,7 +37,16 @@ export type PageContent = {
 export type ProductItem = CardItem & {
   field: string;
   badges: string[];
+  status: ProductOpportunityStatus;
   patentRefs?: string[];
+};
+
+export type ProductOpportunityStatus = "active" | "limited" | "open" | "development" | "nda";
+
+export type ProductOpportunityStatusConfig = {
+  label: string;
+  description: string;
+  cta: string;
 };
 
 export type ProductGroup = {
