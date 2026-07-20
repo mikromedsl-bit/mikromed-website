@@ -1,8 +1,10 @@
 import {
   Beaker,
   Droplets,
+  Factory,
   Layers3,
   Paintbrush,
+  PawPrint,
   Sprout,
   SunMedium,
   Waves
@@ -10,141 +12,117 @@ import {
 import type { ProductGroup, ProductItem } from "@/data/types";
 
 export const productBadges = [
-  "Formulazione esistente",
-  "Prodotto definito",
-  "In sviluppo",
-  "Solo idea",
-  "Documentazione tecnica disponibile",
-  "Documento tecnico-commerciale",
-  "Collegamento da verificare",
-  "Pronto per qualifica B2B",
-  "Licensing",
+  "Formulazione funzionale",
+  "B2B professionale",
+  "Claim da valutare",
+  "Partnership possibile",
+  "Concentrato tecnico",
   "White label",
-  "Distribuzione B2B",
-  "Partnership industriale",
-  "Territori da valutare",
   "Sotto NDA",
-  "Regolatorio da verificare"
+  "Regolatorio da verificare",
+  "Coating",
+  "Additivo funzionale",
+  "B2B industriale",
+  "Licensing possibile",
+  "Materiali trattati",
+  "Supporti tecnici",
+  "Co-sviluppo",
+  "Test richiesti"
 ];
 
 export const surfaceProducts: ProductItem[] = [
   {
-    title: "MikroPaint Concentrato",
+    title: "Formulazione funzionale per superfici professionali",
     description:
-      "Additivo funzionale per idropitture, coating e matrici vernicianti. Da presentare come opportunita B2B, senza dichiarare vendita attiva se non documentata.",
-    field: "Superfici, coating e prodotti tecnici",
+      "Soluzione tecnica sviluppabile per superfici compatibili, ambienti professionali, facility management e applicazioni B2B. Il posizionamento commerciale dipende da destinazione d'uso, claim e categoria prodotto.",
+    field: "Superfici, ambienti professionali e facility",
     badges: [
-      "Formulazione esistente",
-      "Documentazione tecnica disponibile",
-      "B2B coating",
-      "White label",
-      "Partnership industriale"
+      "Formulazione funzionale",
+      "B2B professionale",
+      "Claim da valutare",
+      "Partnership possibile"
     ],
+    patentRefs: ["B01 - 102021000004580"],
+    icon: Layers3
+  },
+  {
+    title: "Soluzione concentrata per applicazioni tecniche",
+    description:
+      "Concept formulativo concentrato per partner professionali, produttori o distributori che necessitano di una base tecnica adattabile a diversi formati e mercati.",
+    field: "Superfici, ambienti professionali e facility",
+    badges: ["Concentrato tecnico", "White label", "Sotto NDA", "Regolatorio da verificare"],
+    patentRefs: ["B01 - 102021000004580"],
+    icon: Waves
+  }
+];
+
+export const coatingPlatforms: ProductItem[] = [
+  {
+    title: "Additivo funzionale per idropitture e coating",
+    description:
+      "Piattaforma additiva sviluppabile per idropitture, rivestimenti tecnici e matrici vernicianti. Puo essere valutata con produttori di pitture, coating e materiali trattati.",
+    field: "Pitture, rivestimenti e coating",
+    badges: ["Coating", "Additivo funzionale", "B2B industriale", "Licensing possibile"],
     patentRefs: ["B01 - 102021000004580"],
     icon: Paintbrush
   },
   {
-    title: "Sterilnova HH RTU",
+    title: "Tecnologia per materiali trattati e supporti tecnici",
     description:
-      "Formulazione funzionale pronta all'uso per applicazioni professionali su superfici compatibili. Claim e categoria devono essere verificati prima di ogni uso commerciale.",
-    field: "Facility / professional care",
-    badges: [
-      "Prodotto definito",
-      "Pronto per qualifica B2B",
-      "Regolatorio da verificare"
-    ],
+      "Soluzione applicabile a supporti, filtri, tessili tecnici o materiali compatibili, da sviluppare con partner industriali e validare in base alla funzione dichiarata.",
+    field: "Pitture, rivestimenti e coating",
+    badges: ["Materiali trattati", "Supporti tecnici", "Co-sviluppo", "Test richiesti"],
     patentRefs: ["B01 - 102021000004580"],
-    icon: Layers3
-  },
-  {
-    title: "Sterilnova Concentrato",
-    description:
-      "Versione concentrata per applicazioni tecniche e professionali, con documentazione controllata ed etichetta in sviluppo.",
-    field: "B2B tecnico",
-    badges: ["Documentazione controllata", "Etichetta in sviluppo", "B2B tecnico"],
-    patentRefs: ["B01 - 102021000004580"],
-    icon: Layers3
-  },
-  {
-    title: "High Hygienic",
-    description:
-      "Prodotto tecnico per superfici e igiene tecnica, con collegamento brevettuale da verificare prima di ogni comunicazione specifica.",
-    field: "Superfici professionali",
-    badges: ["Etichetta definita", "Collegamento da verificare", "Documentazione tecnica"],
-    patentRefs: ["B01 - collegamento da verificare"],
-    icon: Waves
+    icon: Factory
   }
 ];
 
 export const agriculturalPlatforms: ProductItem[] = [
   {
-    title: "Agro Soil / Mikro Soil",
+    title: "Composizione idroritentiva per substrati e radici",
     description:
-      "Formulazione idroritentiva per applicazioni agricole, substrati, serre e vivai, orientata alla gestione fisica dell'acqua.",
-    field: "Agricoltura e gestione idrica",
-    badges: [
-      "Formulazione esistente",
-      "Prospect da qualificare",
-      "Agricoltura / serre",
-      "Distribuzione B2B"
-    ],
+      "Soluzione orientata alla gestione fisica dell'acqua in substrati, suolo e zona radicale, con potenziale sviluppo per vivai, serre, trapianto, colture in vaso e florovivaismo.",
+    field: "Agricoltura, substrati e gestione fisica dell'acqua",
+    badges: ["Agricoltura", "Gestione fisica acqua", "Test agronomici", "Distribuzione da valutare"],
     patentRefs: ["B04 - 102023000025887"],
     icon: Sprout
   },
   {
-    title: "Mikro Earth",
+    title: "Premiscela tecnica per terricci e substrati professionali",
     description:
-      "Concept tecnico per suolo e substrati, orientato alla gestione fisica dell'acqua e allo sviluppo con partner agricoli.",
-    field: "Florovivaismo / substrati",
-    badges: ["In sviluppo", "Documento tecnico", "Collegamento da verificare"],
-    patentRefs: ["B04 - collegamento probabile/da verificare"],
+      "Concept sviluppabile per produttori di substrati, terricci e soluzioni professionali per il verde, da adattare a formulazione, dosaggio e mercato di destinazione.",
+    field: "Agricoltura, substrati e gestione fisica dell'acqua",
+    badges: ["Substrati", "Florovivaismo", "White label", "Partnership aperta"],
+    patentRefs: ["B04 - 102023000025887"],
     icon: Sprout
   },
   {
-    title: "Hydronica Root",
+    title: "Soluzione per trasporto e gestione vivaistica",
     description:
-      "Piattaforma tecnologica per applicazioni agricole e gestione fisica dell'acqua nella zona radicale.",
-    field: "Applicazione radicale",
-    badges: [
-      "Piattaforma agricola",
-      "Partnership industriale",
-      "Test agronomici da sviluppare"
-    ],
+      "Piattaforma applicativa per supportare la gestione fisica dell'acqua durante fasi di trapianto, confezionamento o trasporto di piante, da validare con test specifici.",
+    field: "Agricoltura, substrati e gestione fisica dell'acqua",
+    badges: ["Vivai", "Trasporto piante", "Applicazione da validare", "Co-sviluppo"],
     patentRefs: ["B04 - 102023000025887"],
     icon: Droplets
-  },
-  {
-    title: "Hydronica Foliar",
-    description:
-      "Piattaforma agricola orientata ad applicazioni fogliari e sviluppo di formulazioni funzionali. Il collegamento brevettuale diretto resta da verificare.",
-    field: "Agricoltura",
-    badges: ["Piattaforma agricola", "Collegamento da verificare", "In sviluppo"],
-    patentRefs: ["Piattaforma agricola separata - collegamento da verificare"],
-    icon: Sprout
   }
 ];
 
 export const photoactiveProducts: ProductItem[] = [
   {
-    title: "Fotonika",
+    title: "Sistema fotoattivabile formula + luce",
     description:
-      "Piattaforma fotoattivabile basata su formulazione + attivazione luminosa per applicazioni tecniche in acqua, superfici e gestione tecnica degli odori.",
-    field: "Sistemi fotoattivabili",
-    badges: [
-      "Prodotto definito",
-      "Documento tecnico-commerciale",
-      "Formula + luce",
-      "Partnership industriale"
-    ],
+      "Piattaforma tecnica basata sull'abbinamento tra formulazione e attivazione luminosa, sviluppabile per applicazioni in acqua, superfici, serbatoi o ambienti controllati.",
+    field: "Sistemi fotoattivabili formula + luce",
+    badges: ["Formula + luce", "Sistema tecnico", "Device partner", "Protocollo da definire"],
     patentRefs: ["B03 - 102023000019734"],
     icon: SunMedium
   },
   {
-    title: "Kit Fotonika LED",
+    title: "Concept integrato con dispositivo LED",
     description:
-      "Concept di sistema integrato composto da formulazione e dispositivo di attivazione luminosa, disponibile per sviluppo con partner industriale.",
-    field: "Sistema formula + device",
-    badges: ["Da sviluppare", "Sistema formula + device", "Partnership industriale"],
+      "Soluzione sviluppabile con partner industriali per integrare formulazione e sorgente luminosa in un sistema applicativo completo.",
+    field: "Sistemi fotoattivabili formula + luce",
+    badges: ["LED", "Sistema integrato", "Partnership industriale", "Sotto NDA"],
     patentRefs: ["B03 - 102023000019734"],
     icon: SunMedium
   }
@@ -152,98 +130,106 @@ export const photoactiveProducts: ProductItem[] = [
 
 export const oralCareConcepts: ProductItem[] = [
   {
-    title: "Gel dentinale professionale",
+    title: "Delivery system per applicazioni dental care",
     description:
-      "Concept professionale basato su delivery system per ipersensibilita dentinale, da sviluppare con validazione safety e regolatoria.",
+      "Tecnologia di formulazione e rilascio locale sviluppabile con partner del settore oral care o dental professionale. Categoria prodotto, claim e safety devono essere valutati caso per caso.",
     field: "Oral care e dental",
-    badges: ["Solo idea", "Licensing", "Regolatorio da verificare"],
+    badges: ["Oral care", "Dental", "Licensing possibile", "Safety da validare"],
     patentRefs: ["B02 - 102020000008134"],
     icon: Beaker
   },
   {
-    title: "Dentifricio desensibilizzante white label",
+    title: "Formulazione locale per oral care professionale",
     description:
-      "Concept consumer oral care da sviluppare con partner industriale o brand del settore dental.",
-    field: "Dental consumer",
-    badges: ["Solo idea", "White label", "Claim da validare"],
-    patentRefs: ["B02 - 102020000008134"],
-    icon: Beaker
-  },
-  {
-    title: "Gel orale anti-biofilm",
-    description:
-      "Concept per applicazione locale in ambito oral care, da sviluppare con attenzione a safety, claim e categoria regolatoria.",
-    field: "Oral care",
-    badges: ["Solo idea", "Applicazione da validare", "Licensing"],
-    patentRefs: ["B05 - 102023000020343"],
-    icon: Beaker
-  },
-  {
-    title: "Collutorio tecnico",
-    description:
-      "Concept liquido per oral care, da validare tecnicamente e regolatoriamente prima di qualsiasi posizionamento commerciale.",
-    field: "Oral care",
-    badges: ["Solo idea", "White label", "Regolatorio da verificare"],
+      "Concept formulativo per applicazioni locali in ambito orale, da sviluppare con partner specializzati e con adeguato percorso tecnico-regolatorio.",
+    field: "Oral care e dental",
+    badges: ["Applicazione locale", "Partner specializzato", "Regolatorio da definire", "Sotto NDA"],
     patentRefs: ["B05 - 102023000020343"],
     icon: Beaker
   }
 ];
 
-export const unmappedProducts: ProductItem[] = [
+export const animalCareConcepts: ProductItem[] = [
   {
-    title: "MikroMosquito",
+    title: "Soluzione tecnica per ambienti animali",
     description:
-      "Prodotto consumer outdoor basato su approccio fisico di superficie. Non viene collegato forzatamente a un brevetto se la mappa non lo indica.",
-    field: "Outdoor consumer",
-    badges: [
-      "Prodotto sviluppato",
-      "Collegamento brevettuale non indicato nella mappa",
-      "Partnership / distribuzione da valutare"
-    ],
-    patentRefs: ["Collegamento brevettuale non indicato nella mappa"],
-    icon: Waves
+      "Piattaforma sviluppabile per superfici, attrezzature, box, ambienti zootecnici e gestione tecnica degli spazi animali, con claim e categoria prodotto da valutare.",
+    field: "Animal care e ambienti animali",
+    badges: ["Animal care", "Ambienti tecnici", "B2B zootecnia", "Claim da valutare"],
+    patentRefs: ["B01 - 102021000004580"],
+    icon: PawPrint
   },
   {
-    title: "Tecnologie per lettiere animali",
+    title: "Concept per gestione fisica di umidita e odori",
     description:
-      "Concept minerali per gestione fisica dell'umidita e controllo fisico degli odori, da trattare come area separata se non collegata direttamente ai brevetti.",
-    field: "Animal care",
-    badges: ["In sviluppo", "Partnership industriale", "Regolatorio da verificare"],
+      "Soluzione tecnica sviluppabile per lettiere, substrati o ambienti animali, basata su approccio fisico e da validare in base all'applicazione finale.",
+    field: "Animal care e ambienti animali",
+    badges: ["Approccio fisico", "Umidita e odori", "Lettiera / substrati", "Test richiesti"],
     patentRefs: ["Area applicativa da valutare"],
-    icon: Beaker
+    icon: PawPrint
+  }
+];
+
+export const customDevelopmentPlatforms: ProductItem[] = [
+  {
+    title: "Co-sviluppo di formulazioni funzionali",
+    description:
+      "Percorso di sviluppo con partner industriali che hanno un mercato, un canale distributivo o un'esigenza tecnica e cercano una tecnologia adattabile.",
+    field: "Progetti industriali su misura",
+    badges: ["Co-sviluppo", "Formulazione", "Partner industriale", "Sotto NDA"],
+    patentRefs: ["Portafoglio Mikromed da valutare"],
+    icon: Factory
+  },
+  {
+    title: "Licensing e valorizzazione tecnologica",
+    description:
+      "Valutazione di accesso a tecnologie brevettate o piattaforme applicative attraverso licenza, white label, distribuzione o collaborazione industriale.",
+    field: "Progetti industriali su misura",
+    badges: ["Licensing", "White label", "Distribuzione", "Opportunita da valutare"],
+    patentRefs: ["Portafoglio Mikromed da valutare"],
+    icon: Layers3
   }
 ];
 
 export const homepageProducts = [
   surfaceProducts[0],
-  surfaceProducts[1],
+  coatingPlatforms[0],
   photoactiveProducts[0],
-  agriculturalPlatforms[2],
-  agriculturalPlatforms[0]
+  agriculturalPlatforms[0],
+  oralCareConcepts[0]
 ];
 
 export const developedProducts = [
   ...surfaceProducts,
+  ...coatingPlatforms,
+  ...agriculturalPlatforms,
   ...photoactiveProducts,
   ...oralCareConcepts,
-  ...unmappedProducts
+  ...animalCareConcepts,
+  ...customDevelopmentPlatforms
 ];
 
 export const productGroups: ProductGroup[] = [
   {
-    title: "Superfici, coating e prodotti tecnici",
+    title: "Superfici, ambienti professionali e facility",
     description:
-      "Formulazioni e piattaforme collegate principalmente a B01, con claim commerciali da verificare in base al canale e all'uso previsto.",
+      "Soluzioni funzionali per superfici compatibili, ambienti professionali, facility management e applicazioni B2B, con claim e categoria da valutare.",
     items: surfaceProducts
   },
   {
-    title: "Agricoltura e gestione idrica",
+    title: "Pitture, rivestimenti e coating",
     description:
-      "Piattaforme idroritentive e agricole per suolo, substrati, radici, serre e vivai.",
+      "Piattaforme additive e tecnologie per matrici vernicianti, supporti tecnici e materiali trattati.",
+    items: coatingPlatforms
+  },
+  {
+    title: "Agricoltura, substrati e gestione fisica dell'acqua",
+    description:
+      "Soluzioni idroritentive e concept applicativi per suolo, substrati, radici, serre, vivai e verde professionale.",
     items: agriculturalPlatforms
   },
   {
-    title: "Sistemi fotoattivabili",
+    title: "Sistemi fotoattivabili formula + luce",
     description:
       "Piattaforme basate su formulazione + attivazione luminosa, orientate a sistemi tecnici e collaborazioni industriali.",
     items: photoactiveProducts
@@ -251,13 +237,19 @@ export const productGroups: ProductGroup[] = [
   {
     title: "Oral care e dental",
     description:
-      "Concept e opportunita di licensing in area dental e oral care, da sviluppare con validazione tecnica, safety e regolatoria.",
+      "Tecnologie e concept in area oral care e dental, da sviluppare con validazione tecnica, safety e regolatoria.",
     items: oralCareConcepts
   },
   {
-    title: "Prodotti non direttamente mappati nel file brevetti",
+    title: "Animal care e ambienti animali",
     description:
-      "Prodotti e concept gia presenti nel perimetro Mikromed, mantenuti senza collegamenti brevettuali forzati.",
-    items: unmappedProducts
+      "Soluzioni tecniche per superfici, attrezzature, substrati e ambienti animali, da validare in base all'applicazione.",
+    items: animalCareConcepts
+  },
+  {
+    title: "Progetti industriali su misura",
+    description:
+      "Percorsi di co-sviluppo, licensing e valorizzazione tecnologica per partner con mercato, canale o bisogno applicativo specifico.",
+    items: customDevelopmentPlatforms
   }
 ];

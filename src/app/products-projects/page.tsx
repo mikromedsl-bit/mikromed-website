@@ -12,7 +12,8 @@ export const metadata: Metadata = createMetadata({
   title: page.title,
   description: page.description,
   path: "/products-projects",
-  keywords: page.keywords
+  keywords: page.keywords,
+  includeGlobalKeywords: false
 });
 
 export default function ProductsProjectsPage() {
@@ -35,7 +36,7 @@ export default function ProductsProjectsPage() {
 
       <Section
         title="Panoramica"
-        description={`${page.intro} La disponibilita commerciale, eventuali esclusive territoriali e modelli di partnership vengono valutati caso per caso. I partner esistenti non vengono divulgati pubblicamente. Alcuni prodotti sono formulazioni esistenti o concept sviluppati, ma non devono essere presentati come prodotti gia commercializzati se non esiste una prova commerciale verificata.`}
+        description={page.intro}
       />
 
       {productGroups.map((group, index) => (
@@ -58,6 +59,12 @@ export default function ProductsProjectsPage() {
           title={page.cta.title}
         />
       ) : null}
+
+      <Section
+        title="Nota sulle opportunita"
+        description="Le soluzioni presentate sono formulate come aree di sviluppo, piattaforme tecniche o concept applicativi. La disponibilita commerciale, eventuali esclusive territoriali, modelli di licenza e modalita di partnership vengono valutati caso per caso. I nomi commerciali, i partner esistenti e gli accordi riservati non vengono divulgati pubblicamente."
+        tone="muted"
+      />
     </>
   );
 }

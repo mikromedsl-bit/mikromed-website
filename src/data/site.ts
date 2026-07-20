@@ -307,18 +307,17 @@ export const pages: Record<string, PageContent> = {
   "products-projects": {
     slug: "products-projects",
     eyebrow: "Prodotti e opportunita",
-    title: "Prodotti, piattaforme e opportunita",
+    title: "Soluzioni, piattaforme e opportunita di sviluppo",
     description:
-      "Mikromed sviluppa prodotti, concept e piattaforme tecnologiche basate sul proprio know-how brevettuale.",
+      "Mikromed sviluppa formulazioni, piattaforme tecniche e concept applicativi basati sul proprio know-how. Alcune soluzioni possono essere sviluppate, adattate, concesse in licenza o valorizzate attraverso partnership selezionate.",
     intro:
-      "Alcuni progetti dispongono gia di documentazione tecnica, altri sono disponibili per sviluppo, licenza, distribuzione o partnership.",
+      "In questa sezione non vengono esposti nomi commerciali o accordi riservati. Le opportunita sono presentate per area applicativa e tipologia di soluzione, cosi da permettere a partner industriali, distributori e brand owner di valutare possibili percorsi di sviluppo.",
     keywords: [
-      "prodotti Mikromed",
-      "MikroPaint",
-      "Sterilnova",
-      "Fotonika",
-      "Hydronica",
-      "Agro Soil",
+      "soluzioni Mikromed",
+      "piattaforme tecniche",
+      "formulazioni funzionali",
+      "concept applicativi",
+      "co-sviluppo industriale",
       "white label"
     ],
     sections: productGroups.map((group) => ({
@@ -327,9 +326,9 @@ export const pages: Record<string, PageContent> = {
       items: group.items
     })),
     cta: {
-      title: "Valuta un prodotto, un territorio o una partnership.",
+      title: "Valuta una soluzione, un territorio o una partnership.",
       description:
-        "Possiamo discutere disponibilita commerciale, possibili esclusive territoriali e modelli di collaborazione caso per caso.",
+        "Possiamo discutere sviluppo, licenza, white label, distribuzione o collaborazione industriale caso per caso.",
       href: "/collaborate",
       label: "Collabora con noi"
     }
