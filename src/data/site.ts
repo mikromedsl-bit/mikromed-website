@@ -139,24 +139,21 @@ export const buildWithPatents: CardItem[] = [
     icon: FileLock2
   },
   {
-    title: "Applicazione",
-    description: "Valutazione dei settori raggiungibili e delle applicazioni tecniche realistiche.",
+    title: "Applicazioni",
+    description:
+      "Valutazione dei settori raggiungibili, degli scenari applicativi e delle possibilità tecniche di utilizzo.",
     icon: Layers3
   },
   {
-    title: "Applicazione",
-    description: "Traduzione della tecnologia in scenari tecnici, settori e percorsi di sviluppo.",
+    title: "Sviluppo",
+    description:
+      "Traduzione della tecnologia in formulazioni, prototipi, percorsi tecnici e soluzioni applicative sviluppabili.",
     icon: TestTube2
   },
   {
     title: "Regolatorio",
     description: "Claim strategy, categoria prodotto, documentazione tecnica e comunicazione prudente.",
     icon: ShieldCheck
-  },
-  {
-    title: "Partnership",
-    description: "Licensing, white label, distribuzione B2B, co-sviluppo o accesso tecnico sotto NDA.",
-    icon: Handshake
   }
 ];
 

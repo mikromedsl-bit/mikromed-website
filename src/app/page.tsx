@@ -105,7 +105,7 @@ export default function Home() {
         title="Una piattaforma, piu percorsi applicativi"
         description="Ogni brevetto Mikromed viene analizzato come piattaforma applicativa: cosa protegge, quali settori puo raggiungere e quali percorsi tecnici possono essere valutati con partner selezionati."
       >
-        <CardGrid items={buildWithPatents} columns="five" />
+        <CardGrid items={buildWithPatents} columns="four" />
       </Section>
 
       <Section
