@@ -11,7 +11,6 @@ import {
   TestTube2
 } from "lucide-react";
 import { patentPortfolioSummary } from "@/data/patents";
-import { productGroups } from "@/data/products";
 import {
   patentWritingCards,
   productDevelopmentCards,
@@ -23,7 +22,7 @@ import type { CardItem, PageContent } from "@/data/types";
 export const siteConfig = {
   name: "Mikromed Europa S.L.",
   description:
-    "Brevetti approvati, prodotti sviluppati e collaborazioni industriali per mercati regolati.",
+    "Brevetti approvati, applicazioni industriali e collaborazioni per mercati regolati.",
   url: "https://mikromed-europa.example",
   contactEmail: "info@mikromed-europa.com",
   contactPhone: "+34 000 000 000",
@@ -40,11 +39,11 @@ export const heroServiceCards: (CardItem & { href: string; label: string })[] = 
     icon: FileLock2
   },
   {
-    title: "Prodotti e piattaforme",
+    title: "Applicazioni industriali",
     description:
-      "Formulazioni, concept e piattaforme gia sviluppate o in sviluppo: MikroPaint, Sterilnova, Fotonika, Hydronica, Agro Soil e altri progetti.",
-    href: "/products-projects",
-    label: "Prodotti e opportunita",
+      "Le tecnologie Mikromed possono essere valutate in diversi settori applicativi, con attenzione a funzione tecnica, test e posizionamento regolatorio.",
+    href: "/applications",
+    label: "Esplora le applicazioni",
     icon: Layers3
   },
   {
@@ -69,8 +68,8 @@ export const statBlocks: CardItem[] = [
     icon: FileLock2
   },
   {
-    title: "Prodotti e piattaforme sviluppate",
-    description: "MikroPaint, Sterilnova, Fotonika, Hydronica, Agro Soil e concept collegati.",
+    title: "Applicazioni dei brevetti",
+    description: "Settori applicativi e scenari tecnici organizzati brevetto per brevetto.",
     icon: Layers3
   },
   {
@@ -93,9 +92,9 @@ export const whatMikromedDoes: CardItem[] = [
     icon: FileLock2
   },
   {
-    title: "Creiamo prodotti e piattaforme",
+    title: "Valutiamo applicazioni industriali",
     description:
-      "Trasformiamo tecnologie e know-how in prodotti, concept e piattaforme per superfici, coating, oral care, agricoltura e gestione idrica.",
+      "Analizziamo settori, funzioni tecniche, test e posizionamento regolatorio per valorizzare le tecnologie brevettate.",
     icon: Layers3
   },
   {
@@ -116,11 +115,11 @@ export const collaborateCards: (CardItem & { href: string; label: string })[] = 
     icon: FileLock2
   },
   {
-    title: "White label e sviluppo prodotto",
+    title: "Applicazioni industriali e sviluppo su misura",
     description:
-      "Adattamento di formulazioni, concept e piattaforme a brand, canali o territori selezionati.",
-    href: "/products-projects",
-    label: "Esplora i prodotti",
+      "Valutazione di applicazioni, sviluppo formulativo e percorsi tecnici con partner selezionati.",
+    href: "/applications",
+    label: "Esplora le applicazioni",
     icon: TestTube2
   },
   {
@@ -145,8 +144,8 @@ export const buildWithPatents: CardItem[] = [
     icon: Layers3
   },
   {
-    title: "Prodotto",
-    description: "Collegamento a formulazioni esistenti, concept o piattaforme sviluppabili.",
+    title: "Applicazione",
+    description: "Traduzione della tecnologia in scenari tecnici, settori e percorsi di sviluppo.",
     icon: TestTube2
   },
   {
@@ -264,8 +263,7 @@ export const pages: Record<string, PageContent> = {
       "licensing tecnologia",
       "white label",
       "rame e argento",
-      "chabasite",
-      "Fotonika"
+      "chabasite"
     ],
     sections: [
       { title: "Il portafoglio brevetti Mikromed", items: patentPortfolioCards },
@@ -304,41 +302,12 @@ export const pages: Record<string, PageContent> = {
     keywords: ["applicazioni brevetti", "settori applicativi", "sviluppo con partner", "licensing tecnologia"],
     sections: [{ title: "Applicazioni organizzate per brevetto", items: [] }]
   },
-  "products-projects": {
-    slug: "products-projects",
-    eyebrow: "Prodotti e opportunita",
-    title: "Soluzioni, piattaforme e opportunita di sviluppo",
-    description:
-      "Mikromed sviluppa formulazioni, piattaforme tecniche e concept applicativi basati sul proprio know-how. Alcune soluzioni sono gia attive in mercati selezionati, mentre altre sono disponibili per licensing, white label, distribuzione o co-sviluppo.",
-    intro:
-      "I colori e gli stati indicano il livello di disponibilita commerciale o progettuale. Le informazioni dettagliate su territori, esclusivita e modelli di partnership vengono condivise solo in fase di confronto diretto o sotto NDA.",
-    keywords: [
-      "soluzioni Mikromed",
-      "piattaforme tecniche",
-      "formulazioni funzionali",
-      "concept applicativi",
-      "co-sviluppo industriale",
-      "white label"
-    ],
-    sections: productGroups.map((group) => ({
-      title: group.title,
-      description: group.description,
-      items: group.items
-    })),
-    cta: {
-      title: "Valuta una soluzione, un territorio o una partnership.",
-      description:
-        "Possiamo discutere sviluppo, licenza, white label, distribuzione o collaborazione industriale caso per caso.",
-      href: "/collaborate",
-      label: "Collabora con noi"
-    }
-  },
   collaborate: {
     slug: "collaborate",
     eyebrow: "Collabora con noi",
     title: "Collabora con Mikromed",
     description:
-      "Dai brevetti approvati ai prodotti sviluppati: Mikromed puo collaborare con partner industriali per licensing, white label, distribuzione, co-sviluppo e nuovi progetti brevettuali.",
+      "Mikromed collabora con aziende, distributori, laboratori e partner industriali per valutare applicazioni delle proprie tecnologie brevettate, sviluppare nuove formulazioni, definire strategie regolatorie e strutturare nuovi progetti brevettuali.",
     intro:
       "Le informazioni tecniche dettagliate vengono condivise sotto NDA o all'interno di un percorso di collaborazione strutturato.",
     keywords: ["licensing tecnologia", "white label", "distribuzione B2B", "co-sviluppo", "partnership industriali"],
@@ -352,8 +321,8 @@ export const pages: Record<string, PageContent> = {
             icon: FileLock2
           },
           {
-            title: "Sviluppa un prodotto dal portafoglio Mikromed",
-            description: "Partiamo da formulazioni, concept o piattaforme gia strutturate.",
+            title: "Valuta applicazioni industriali",
+            description: "Partiamo dal portafoglio brevettuale e da un bisogno applicativo specifico.",
             icon: Layers3
           },
           {
@@ -444,9 +413,9 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "Servizi",
     title: "Servizi tecnici, regolatori e brevettuali",
     description:
-      "I servizi Mikromed completano le attivita su brevetti e prodotti propri: consulenza regolatoria, sviluppo prodotto e supporto tecnico brevettuale.",
+      "I servizi Mikromed completano le attivita su brevetti e applicazioni industriali: consulenza regolatoria, sviluppo prodotto e supporto tecnico brevettuale.",
     intro:
-      "Mikromed non e solo una societa di servizi: i servizi sono parte di un ecosistema fatto di proprieta intellettuale, prodotti proprietari e collaborazioni industriali.",
+      "Mikromed non e solo una societa di servizi: i servizi sono parte di un ecosistema fatto di proprieta intellettuale, applicazioni industriali e collaborazioni tecniche.",
     keywords: ["consulenza regolatoria", "sviluppo prodotto", "scrittura brevetti"],
     sections: [
       { title: "Consulenza regolatoria", items: regulatoryCards },
@@ -483,7 +452,7 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "Partnership",
     title: "Partnership tecnologiche, regolatorie e brevettuali",
     description:
-      "Mikromed lavora con partner industriali su prodotti, licenze, distribuzione, consulenza regolatoria e supporto tecnico brevettuale.",
+      "Mikromed lavora con partner industriali su tecnologie brevettate, applicazioni, licenze, consulenza regolatoria e supporto tecnico brevettuale.",
     intro:
       "Il percorso puo includere primo confronto, NDA, valutazione tecnica, proposta progetto, sviluppo, lancio o supporto al deposito.",
     keywords: ["partnership industriali", "sviluppo prodotto", "consulenza regolatoria", "scrittura brevetti"],
@@ -504,7 +473,7 @@ export const globalKeywords = [
   "brevetti Mikromed",
   "tecnologie brevettate",
   "formulazioni funzionali",
-  "prodotti funzionali",
+  "applicazioni industriali",
   "licensing tecnologia",
   "white label",
   "consulenza regolatoria",
@@ -517,9 +486,5 @@ export const globalKeywords = [
   "coating",
   "agricoltura",
   "gestione idrica",
-  "oral care",
-  "Hydronica",
-  "MikroPaint",
-  "Sterilnova",
-  "Fotonika"
+  "oral care"
 ];

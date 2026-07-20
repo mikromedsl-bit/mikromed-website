@@ -4,7 +4,6 @@ export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Brevetti e Tecnologie", href: "/patents" },
   { label: "Applicazioni", href: "/applications" },
-  { label: "Prodotti e Opportunita", href: "/products-projects" },
   { label: "Collabora con noi", href: "/collaborate" },
   {
     label: "Servizi",

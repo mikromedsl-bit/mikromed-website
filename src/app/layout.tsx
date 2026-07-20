@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = createMetadata({
   title: "Mikromed Europa S.L.",
   description:
-    "Brevetti approvati, prodotti sviluppati e collaborazioni industriali per mercati regolati: licensing, white label, consulenza regolatoria e sviluppo prodotto."
+    "Brevetti approvati, applicazioni industriali e collaborazioni per mercati regolati: licensing, consulenza regolatoria, sviluppo prodotto e scrittura brevetti."
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
