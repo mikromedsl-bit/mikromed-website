@@ -4,7 +4,7 @@ import type { PatentApplicationItem, PendingApplicationItem } from "@/data/types
 
 function DetailList({ items }: { items: string[] }) {
   return (
-    <ul className="mt-3 grid gap-2 text-sm leading-6 text-mineral-700 sm:grid-cols-2">
+    <ul className="mt-3 space-y-1.5 text-sm leading-snug text-mineral-700">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -34,7 +34,7 @@ export function PatentApplicationCard({ item }: { item: PatentApplicationItem })
         </ButtonLink>
       </div>
 
-      <div className="mt-6 grid gap-6 xl:grid-cols-3">
+      <div className="mt-6 grid gap-x-8 gap-y-5 xl:grid-cols-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mineral-500">
             Settori applicativi possibili
