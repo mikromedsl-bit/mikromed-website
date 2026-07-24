@@ -3,6 +3,7 @@ import type { NavItem } from "@/data/types";
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Brevetti e Tecnologie", href: "/patents" },
+  { label: "Evidenze scientifiche", href: "/evidenze-scientifiche" },
   { label: "Applicazioni", href: "/applications" },
   { label: "Collabora con noi", href: "/collaborate" },
   {
